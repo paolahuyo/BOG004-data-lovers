@@ -1,0 +1,41 @@
+body{
+    background-color: #dbf7e4; 
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+
+}
+
+
+header{
+    background-color: #bdffbd;
+    height: 90px;
+    width: 100%;
+}
+
+.menu{
+    width: 900px;
+    margin: 0 auto;
+ 
+}
+
+nav {
+    float: right;
+}
+
+nav ul li {
+    list-style: none;
+    margin-left: 75px;
+    padding: 12px 0;
+    float: left;
+    position: relative;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #444;
+    font-weight: bold;
+}
