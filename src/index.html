@@ -1,24 +1,62 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Directory Ghibli</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <header>
-    <div class="menu">
-      <img id="logo" src="" alt="logoDG">
-      <nav>
-        <p>
-          <ul class="tabs">
-            <li><a href="#tab1" id="tab1"><span>Menu</span></a></li>
-          </ul>
-        </p>
-      </nav>
+
+<head>
+  <meta charset="utf-8">
+  <title>Directory Ghibli</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<header>
+  <div class="topnav">
+    <img id="logo" src="logos/directory-ghibli-logo.png" alt="logoDG">
+    <nav>
+      <p>
+      <ul class="tabs">
+        <li><a href="#tab1" id="tab1"><span>Menu</span></a></li>
+      </ul>
+    </p>
+      <div class="search-container">
+        <form action="/action_page.php">
+          <input type="text" placeholder="Search.." name="search">
+          <button type="submit">Submit</button>
+        </form>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<body>
+  <div id="root" class="root">
+    <div id="ghibli">
+      <img src="" id="imgGhibli" height="300px">
+      <script>
+        const $ghibli = document.querySelector('#imgGhibli')
+        function renderGhibli(image) {
+          $ghibli.setAttribute('src', image)
+        }
+
+        fetch('data/ghibli/ghibli.json')
+          .then(function (res) {
+            return res.json();
+          })
+          .then(function (data) {
+            console.log(data);
+            let html = '';
+            data.forEach(function (films) {
+              html += `
+            <li>${films.title} ${films.description} ${films.director} ${films.producer} ${films.poster} ${films.release_date} ${films.rt_score}</li>
+            `;
+            })
+            document.getElementById('ghibli').innerHTML = html;
+          })
+
+      //.then(response => response.json())
+      //.then(data=> renderGhibli(data.img))
+
+      </script>
     </div>
-  </header>
-  <body>
-    <div id="root"></div>
-    <script src="main.js" type="module"></script>
-  </body>
+    <!-- <script src="main.js" type="module"></script>-->
+  </div>
+</body>
+
 </html>
