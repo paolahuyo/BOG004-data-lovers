@@ -1,17 +1,18 @@
 body{
-    background-color: #dbf7e4; 
+    background-color: #ffffff; 
 }
 
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family:'Space Grotesk', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 
 }
 
 
 header{
-    background-color: #bdffbd;
+    background-color: #8FCAD7;
     height: 90px;
     width: 100%;
 }
