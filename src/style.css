@@ -23,10 +23,17 @@ header{
  
 }
 
-nav {
-    float: right;
+#logo {
+  width: 180px; 
+  float: left;
+  padding: 0px;
+  
 }
 
+.menu{
+  float:inline-start;
+  display: flex;
+}
 nav ul li {
     list-style: none;
     margin-left: 75px;
@@ -81,4 +88,4 @@ nav ul li a {
     }
     .topnav input[type=text] {
       border: 1px solid #ccc;  
-    }
+   } }
