@@ -1,100 +1,137 @@
-body{
-    background-color: #ffffff; 
+body {
+  background-color: #ffffff;
 }
 
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family:'Space Grotesk', 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-header{
-    margin: auto;
-    background-color: #8FCAD7;
-    height: 90px;
-    width: 100%;
+header {
+  margin: auto;
+  background-color: #8fcad7;
+  height: 90px;
+  width: 100%;
+  font-family: "Space Grotesk", "Gill Sans", "Gill Sans MT", Calibri,
+    "Trebuchet MS", sans-serif;
 }
 
-.menu{
-    width: 900px;
-    margin: 0 auto;
+.menu {
+  width: 900px;
+  margin: 0 auto;
 }
 
 #logo {
-  width: 180px; 
+  width: 180px;
   float: left;
   padding: 0px;
 }
 
-.menu{
-  float:inline-start;
+.menu {
+  float: inline-start;
   display: flex;
 }
 
 ul li {
-    list-style: none;
-    margin-left: 75px;
-    padding: 12px 0;
-    float: left;
-    position: relative;
+  list-style: none;
+  margin-left: 75px;
+  padding: 12px 0;
+  float: left;
+  position: relative;
 }
 
-.nav li:hover{
+.nav li:hover {
   background: #5fb4c9;
 }
 
 .nav ul li a {
-    text-decoration: none;
-    color: #444;
-    background-color: #8FCAD7;
-    font-weight: bold;
-    padding: 10px 15px;
-    display: block;
+  text-decoration: none;
+  color: #444;
+  background-color: #8fcad7;
+  font-weight: bold;
+  padding: 10px 15px;
+  display: block;
 }
 
-.nav > li{
+.nav > li {
   float: left;
 }
 
 .topnav .search-container {
-    float: right;
+  float: right;
+}
+
+.topnav input[type="text"] {
+  padding: 6px;
+  margin-top: 8px;
+  font-size: 17px;
+  border: none;
+}
+
+.topnav .search-container button {
+  float: right;
+  padding: 6px;
+  margin-top: 8px;
+  margin-right: 16px;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+}
+
+.topnav .search-container button:hover {
+  background: #ccc;
+}
+
+@media screen and (max-width: 600px) {
+  .topnav .search-container {
+    float: none;
   }
-  
-  .topnav input[type=text] {
-    padding: 6px;
-    margin-top: 8px;
-    font-size: 17px;
-    border: none;
-  }
-  
+  .topnav a,
+  .topnav input[type="text"],
   .topnav .search-container button {
-    float: right;
-    padding: 6px;
-    margin-top: 8px;
-    margin-right: 16px;
-    background: #ddd;
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
   }
-  
-  .topnav .search-container button:hover {
-    background: #ccc;
+  .topnav input[type="text"] {
+    border: 1px solid #ccc;
   }
-  
-  @media screen and (max-width: 600px) {
-    .topnav .search-container {
-      float: none;
-    }
-    .topnav a, .topnav input[type=text], .topnav .search-container button {
-      float: none;
-      display: block;
-      text-align: left;
-      width: 100%;
-      margin: 0;
-      padding: 14px;
-    }
-    .topnav input[type=text] {
-      border: 1px solid #ccc;  
-   } }
+}
+
+#titles {
+  font-size: 20;
+  font-weight: 400;
+  font-family: system-ui;
+}
+
+#photos {
+  width: 250px;
+  height: 358px;
+  border-radius: 10px;
+}
+
+#elements {
+  width: 300px;
+  height: 480px;
+  padding: 10px;
+  align-items: center;
+}
+
+#ghibli{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#listElements{
+  justify-content: center;
+  color:#5fb4c9 ;
+  align-items: center;
+}
+
