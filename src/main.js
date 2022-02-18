@@ -1,7 +1,22 @@
-//import { example } from './data.js';
-//import data from './data/ghibli/ghibli.js';
-// import data from './data/lol/lol.js';
-//import data from './data/pokemon/pokemon.js';
-// import data from './data/rickandmorty/rickandmorty.js';
+const $ghibli = document.querySelector('#imgGhibli')
+function renderGhibli(image) {
+  $ghibli.setAttribute('src', image)
+}
+let x =''
+fetch('data/ghibli/ghibli.json')
+  .then(function (res) {
 
-//console.log(example, data);
+    return res.json();
+  })
+  .then(function (data) {
+      x=data
+    console.log(data);
+    let html = '';
+    data.films.forEach(function (films) {
+      html += `
+    <li>${films.title} ${films.description} ${films.director} ${films.producer} ${films.poster} ${films.release_date} ${films.rt_score}</li>
+    `;
+    })
+    document.getElementById('ghibli').innerHTML = html;
+  })
+console.log (x);

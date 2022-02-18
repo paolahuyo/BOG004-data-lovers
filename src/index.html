@@ -31,33 +31,9 @@
   <div id="root" class="root">
     <div id="ghibli">
       <img src="" id="imgGhibli" height="300px">
-      <script>
-        const $ghibli = document.querySelector('#imgGhibli')
-        function renderGhibli(image) {
-          $ghibli.setAttribute('src', image)
-        }
-
-        fetch('data/ghibli/ghibli.json')
-          .then(function (res) {
-            return res.json();
-          })
-          .then(function (data) {
-            console.log(data);
-            let html = '';
-            data.forEach(function (films) {
-              html += `
-            <li>${films.title} ${films.description} ${films.director} ${films.producer} ${films.poster} ${films.release_date} ${films.rt_score}</li>
-            `;
-            })
-            document.getElementById('ghibli').innerHTML = html;
-          })
-
-      //.then(response => response.json())
-      //.then(data=> renderGhibli(data.img))
-
-      </script>
+  
     </div>
-    <!-- <script src="main.js" type="module"></script>-->
+    <script src="main.js" type="module"></script>
   </div>
 </body>
 
