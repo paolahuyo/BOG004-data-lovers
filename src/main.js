@@ -1,5 +1,5 @@
 
-fetch("data/ghibli/ghibli.json")
+/*fetch("data/ghibli/ghibli.json")
   .then(function (res) {
     return res.json();
   })
@@ -15,6 +15,24 @@ fetch("data/ghibli/ghibli.json")
     `;
     });
     document.getElementById("ghibli").innerHTML = html;
-  });
+  });*/
+
+function searchMovie(query){
+  const url = `data/ghibli/ghibli.json=${query}`;
+  fetch(url)
+  .then(response => response.json())
+  .catch(()=>console.error("hay errores"))
+  .then((jsonData)=> {
+    console.log("esta es la data");
+    console.log(jsonData);
+ });
+}
 
 //  DESCRIPTION: ${films.description}, DIRECTOR: ${films.director}, PRODUCER: ${films.producer}, RELEASE DATE: ${films.release_date}
+
+/*async function fetch (){
+  const datosFetched = await fetch();
+  console.log(datosFetched);
+}
+
+fetch();*/
