@@ -126,7 +126,7 @@ ul li {
   align-items: center;
 }
 
-#ghibli{
+#ghibliMovies{
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
