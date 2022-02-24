@@ -1,24 +1,22 @@
-import { dataFetched } from "./data.js";
-console.log(dataFetched);
+import data from './data/ghibli/ghibli.js';
+import {filtrarPeliculas} from './data.js';
 
-  function searchMovie(condition){
-    const url = `data/ghibli/ghibli.json`;
-    fetch(url)
-    .then(response => response.json())
-    .then((jsonData) => {
-     console.log(jsonData.films.filter(film => film.title.includes(condition)))
-     return jsonData.films.filter(film => film.title.includes(condition)); 
-   });
-  }
+ let dataFilms= data.films
+console.log(dataFilms);
 
-  searchMovie("Totoro");
-
-
-//  DESCRIPTION: ${films.description}, DIRECTOR: ${films.director}, PRODUCER: ${films.producer}, RELEASE DATE: ${films.release_date}
-
-/*async function fetch (){
-  const datosFetched = await fetch();
-  console.log(datosFetched);
+function mostrar(data){
+  let html = "";
+       data.forEach(function (film) {
+        html += `
+              <div id="elements">
+              <img id="photos" src="${film.poster}" alt="Poster's ${film.title}">
+              <h2 id="titles"> FILM: ${film.title}<br>SCORE: ${film.rt_score}<h2>
+              </div>
+      `;
+      });
+      document.getElementById("ghibliMovies").innerHTML = html;
 }
+mostrar(dataFilms)
 
-fetch();*/
+console.log (filtrarPeliculas(dataFilms, 'Castle in the Sky'))
+
