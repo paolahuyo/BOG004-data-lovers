@@ -7,24 +7,26 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <header>
-  <div class="topnav">
+  <div class="navbar">
     <img id="logo" src="logos/directory-ghibli-logo.png" />
     <nav>
       <div id="menu">
-          <ul class="tabs" style="font-size: 22px;">
-            <li><id="tab1"><a href=""><span>Menu</span></a>
-              <ul>
-                <!-- <li><a href="">Movies</li></a> -->
-                <!-- <li><a href="">Characters</li></a> -->
-                <!-- <li><a href="">Directors</li></a> -->
-                <!-- <li><a href="">Producers</li></a> -->
-                <!-- <li><a href="">Locations</li></a> -->
-              </ul>
-            </li>   
-          </ul>
+        <div class="dropdown">
+          <button class="dropbtn">Menu<i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="#">Movies</a>
+            <a href="#">Characters</a>
+            <a href="#">Locations</a>
+            <a href="#">Vehicles</a>
+          </div>
+        </div>
+      </div>
+      <div class="topnav">
       <div class="search-container">
         <input id="formulario" type="text" placeholder="Search.." name="search">
         <button id="btn-send" type="send">Send</button>
+    </div>
     </div>
     </nav>
   </div>
