@@ -1,8 +1,14 @@
 import data from './data/ghibli/ghibli.js';
 import {filtrarPeliculas} from './data.js';
 
- let dataFilms= data.films
+let dataFilms= data.films
 console.log(dataFilms);
+
+const palabraClave = document.querySelector('#formulario');
+const send = document.querySelector('#btn-send');
+
+
+/*funcion para pintar los posters de las peliculas*/
 
 function mostrar(data){
   let html = "";
@@ -19,4 +25,4 @@ function mostrar(data){
 mostrar(dataFilms)
 
 console.log (filtrarPeliculas(dataFilms, 'Castle in the Sky'))
-
+send.addEventListener('click',filtrarPeliculas(dataFilms,palabraClave))

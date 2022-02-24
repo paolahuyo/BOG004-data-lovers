@@ -1,5 +1,6 @@
 export function filtrarPeliculas (data, palabraClave){
-  return   data.filter((element)=>{
+  console.log(palabraClave.value);
+  return  data.filter((element)=>{
    return element.title == palabraClave
   })
 }
