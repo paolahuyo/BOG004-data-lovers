@@ -35,8 +35,10 @@ for ( let i=0; i< tarjetas.length; i++ ) {
             rootMovies.style.display= "none";
             rootMovie.style.display= "block";
             const movieSelected = dataFilms[i];
+            const srcPoster = dataFilms[i].poster;
+            console.log(srcPoster);
             titleMovie.innerText = movieSelected.title;
-            photoMovie.setAttribute('src', 'dataFilms.poster[i]');
+            photoMovie.setAttribute('src', 'srcPoster');
 
 
       })
