@@ -10,21 +10,10 @@ body {
 
 header {
   margin: auto;
-  background-color: #8fcad7;
   height: 100px;
   width: 100%;
   font-family: "Space Grotesk", "Gill Sans", "Gill Sans MT", Calibri,
     "Trebuchet MS", sans-serif;
-}
-
-.menu {
-  width: 900px;
-  margin: 0 auto;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
 }
 
 #logo {
@@ -34,41 +23,26 @@ header {
 }
 
 .menu {
-  float: inline-start;
+  float: inline-flex;
   display: flex;
-}
-
-.nav li:hover {
-  background: #5fb4c9;
-}
-
-.nav ul li a {
-  text-decoration: none;
-  color: #444;
-  background-color: #8fcad7;
-  font-weight: bold;
-  padding: 10px 15px;
-  display: block;
-}
-
-.nav > li {
-  float: left;
 }
 
 .navbar {
   overflow: hidden;
-  background-color: #00d9ff;
-  float: hidden;
+  background-color: #5fb4c9;
+  vertical-align: middle;
 }
 
-.navbar a {
+.navbar a{
   float: left;
-  font-size: 16px;
+  font-size: 20px;
   color: white;
   text-align: center;
   padding: 30px 40px;
   text-decoration: none;
 }
+
+/*Estilos Menu y Submenu*/
 
 .dropdown {
   float: left;
@@ -76,7 +50,7 @@ header {
 }
 
 .dropdown .dropbtn {
-  font-size: 16px;  
+  font-size: 20px;  
   border: none;
   outline: none;
   color: white;
@@ -87,7 +61,7 @@ header {
 }
 
 .navbar a:hover, .dropdown:hover .dropbtn {
-  background-color: #11a6c0;
+  background-color: #8fcad7;
 }
 
 .dropdown-content {
@@ -116,15 +90,26 @@ header {
   display: block;
 }
 
-.topnav .search-container {
+/*Estilos Barra de busqueda*/
+
+.topnav{
   float: right;
+  margin: 100px auto;
+  max-width: 450px;
+}
+
+.topnav .search-container {
+  background: #8fcad7;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
 }
 
 .topnav input[type="text"] {
   padding: 6px;
   margin-top: 8px;
   font-size: 17px;
-  border: none;
+  border-color: #444;
+  border: solid;
 }
 
 .topnav .search-container button {
@@ -142,8 +127,8 @@ header {
   background: #ccc;
 }
 
-@media screen and (max-width: 600px) {
-  .topnav .search-container {
+@media screen and (max-width: 450px) {
+  topnav .search-container {
     float: none;
   }
   .topnav a,

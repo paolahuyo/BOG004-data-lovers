@@ -10,6 +10,12 @@ const rootMovies = document.querySelector('#rootMovies');
 const rootMovie = document.querySelector('#rootMovie');
 const titleMovie = document.querySelector('#titleMovie');
 const photoMovie = document.querySelector('#photoMovie');
+const descriptionMovie = document.querySelector('#descriptionMovie');
+const rateMovie = document.querySelector('#rateMovie');
+const releaseDate = document.querySelector('#releaseDate');
+const directorMovie = document.querySelector('#directorMovie');
+const producerMovie = document.querySelector('#producerMovie');
+
 
 /*funcion para pintar los posters de las peliculas*/
 
@@ -34,17 +40,18 @@ for ( let i=0; i< tarjetas.length; i++ ) {
       tarjetas[i].addEventListener ('click', () => {
             rootMovies.style.display= "none";
             rootMovie.style.display= "block";
-            const movieSelected = dataFilms[i];
-            const srcPoster = dataFilms[i].poster;
-            console.log(srcPoster);
-            titleMovie.innerText = movieSelected.title;
-            photoMovie.setAttribute('src', 'srcPoster');
-
-
+            titleMovie.innerText = dataFilms[i].title;
+            photoMovie.setAttribute('src', dataFilms[i].poster);
+            rateMovie.innerText = dataFilms[i].rt_score;
+            releaseDate.innerText = dataFilms[i].release_date;
+            directorMovie.innerText = dataFilms[i].director;
+            producerMovie.innerText = dataFilms[i].producer;
+            descriptionMovie.innerText = dataFilms[i].description;
       })
 }
-
 console.log(tarjetas);
+
+/*Evento del botón Search*/
 send.addEventListener('click',() => filtrarPeliculas(dataFilms,palabraClave))
 
 

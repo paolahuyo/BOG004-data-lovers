@@ -9,50 +9,83 @@
 <header>
   <div class="navbar">
     <img id="logo" src="logos/directory-ghibli-logo.png" />
-    <nav>
-      <div id="menu">
-        <div class="dropdown">
-          <button class="dropbtn">Menu<i class="fa fa-caret-down"></i>
-          </button>
-          <div class="dropdown-content">
-            <a href="#" id="partFilms">Movies</a>
-            <a href="#partPeople">Characters</a>
-            <a href="#partLocations">Locations</a>
-            <a href="#partVehicles">Vehicles</a>
-          </div>
+    <div class="menu">
+      <div class="dropdown">
+        <button class="dropbtn">Menu<i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="#" id="partFilms">Movies</a>
+          <a href="#partPeople">Characters</a>
+          <a href="#partLocations">Locations</a>
+          <a href="#partVehicles">Vehicles</a>
         </div>
       </div>
-      <div class="topnav">
-      <div class="search-container">
-        <input id="formulario" type="text" placeholder="Search.." name="search">
-        <button id="btn-send" type="send">Send</button>
     </div>
-    </div>
-    </nav>
   </div>
 </header>
-<!---Sección Movies-->
+
+
 <body>
+  <!---Barra de Busqueda-->
+  <div class="topnav">
+    <div class="search-container">
+      <input id="formulario" type="text" placeholder="Search.." name="search">
+      <button id="btn-send" type="send">Send</button>
+      <div class="autocom-box"></div>
+      <li id="coincidences"> sfdfsd</li>
+      <li id="coincidences"> sfdfsd</li>
+      <li id="coincidences"> sfdfsd</li>
+      <li id="coincidences"> sfdfsd</li>
+      <li id="coincidences"> sfdfsd</li>
+      <div class="icon"><i class="fas fa-search"></i> </fa-search>
+      </div>
+    </div>
+  </div>
+  <!---Sección Movies-->
   <div id="rootMovies" class="rootMovies">
-  <div id="listElements"><h2>Movies</h2></div>
-  <div id="ghibliMovies"></div>
+    <div id="listElements">
+      <h2>Movies</h2>
+    </div>
+    <div id="ghibliMovies"></div>
   </div>
 
-<!---Sección Movie selected-->
+  <!---Sección Movie selected-->
   <div id="rootMovie">
-  <div id="titleElement"><h2>Movie:</h2></div>
-  <div><h3 id="titleMovie"> </h3></div>
-  <img id="photoMovie" src="" alt="Poster">
-  <div id="description"></div>
+    <div id="titleElement">
+      <h2>Movie:</h2>
+    </div>
+    <div>
+      <h3 id="titleMovie"> </h3>
+    </div>
+    <img id="photoMovie" src="" alt="Poster">
+    <h2>Rate:</h2>
+    <div>
+      <p id="rateMovie"></p>
+    </div>
+    <h2>Release Date:</h2>
+    <div>
+      <p id="releaseDate"></p>
+    </div>
+    <h2>Director:</h2>
+    <div>
+      <p id="directorMovie"></p>
+    </div>
+    <h2>Producer:</h2>
+    <div>
+      <p id="producerMovie"></p>
+    </div>
+    <h2>Description:</h2>
+    <div>
+      <p id="descriptionMovie"></p>
+    </div>
   </div>
 
 
-<!---Sección Characters-->
+  <!---Sección Characters-->
   <div id="characters">somos todos los personajes</div>
-  
-<script src="main.js" type="module"></script>
-  
+
+  <script src="main.js" type="module"></script>
+
 </body>
 
 </html>
-
