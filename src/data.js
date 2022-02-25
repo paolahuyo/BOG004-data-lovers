@@ -4,3 +4,4 @@ export function filtrarPeliculas (data, palabraClave){
   return element.title.toLowerCase() == palabraClave.value.toLowerCase()
   })
 }
+

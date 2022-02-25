@@ -102,17 +102,43 @@ header {
   background: #8fcad7;
   border-radius: 5px;
   box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+  position: relative;
 }
 
 .topnav input[type="text"] {
-  padding: 6px;
+  height: 40px;
+  width: auto;
+  padding: 6px 6px 6px 40px;
   margin-top: 8px;
   font-size: 17px;
-  border-color: #444;
-  border: solid;
+  border: none;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+}
+
+.topnav .autocom-box{
+  padding: 10px 8px;
+  max-height: 280px;
+  overflow-y: auto;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+  display: none;
+}
+
+.autocom-box li:hover{
+  background-color: #5fb4c9;
 }
 
 .topnav .search-container button {
+  height: 40px;
+  width: auto;
   float: right;
   padding: 6px;
   margin-top: 8px;
@@ -125,6 +151,17 @@ header {
 
 .topnav .search-container button:hover {
   background: #ccc;
+}
+
+.search-container .icon{
+  margin-top: 10px;
+  margin-left: 10px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 @media screen and (max-width: 450px) {
@@ -144,6 +181,12 @@ header {
   .topnav input[type="text"] {
     border: 1px solid #ccc;
   }
+}
+
+.topnav #icons{
+  width: 20px;
+  height: 20px;
+
 }
 
 #titles {
