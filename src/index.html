@@ -15,10 +15,10 @@
           <button class="dropbtn">Menu<i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="#">Movies</a>
-            <a href="#">Characters</a>
-            <a href="#">Locations</a>
-            <a href="#">Vehicles</a>
+            <a href="#" id="partFilms">Movies</a>
+            <a href="#partPeople">Characters</a>
+            <a href="#partLocations">Locations</a>
+            <a href="#partVehicles">Vehicles</a>
           </div>
         </div>
       </div>
@@ -31,22 +31,27 @@
     </nav>
   </div>
 </header>
-
+<!---Sección Movies-->
 <body>
   <div id="rootMovies" class="rootMovies">
   <div id="listElements"><h2>Movies</h2></div>
-    <div id="ghibliMovies"></div>
+  <div id="ghibliMovies"></div>
+  </div>
 
-  <div id="movie">
+<!---Sección Movie selected-->
+  <div id="rootMovie">
   <div id="titleElement"><h2>Movie:</h2></div>
-  <div id="movieSelected"><h3></h3></div>
-  <img id="photos" src="" alt="Poster">
+  <div><h3 id="titleMovie"> </h3></div>
+  <img id="photoMovie" src="" alt="Poster">
   <div id="description"></div>
+  </div>
 
 
-  </div>
-    <script src="main.js" type="module"></script>
-  </div>
+<!---Sección Characters-->
+  <div id="characters">somos todos los personajes</div>
+  
+<script src="main.js" type="module"></script>
+  
 </body>
 
 </html>
