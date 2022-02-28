@@ -225,3 +225,7 @@ header {
   font-family: "Space Grotesk";
 }
 
+#rootMovie{
+  justify-content: center;
+  align-items: center;
+}

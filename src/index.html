@@ -14,7 +14,7 @@
         <button class="dropbtn">Menu<i class="fa fa-caret-down"></i>
         </button>
         <div class="dropdown-content">
-          <a href="#" id="partFilms">Movies</a>
+          <a href="index.html" id="partFilms">Movies</a>
           <a href="#partPeople">Characters</a>
           <a href="#partLocations">Locations</a>
           <a href="#partVehicles">Vehicles</a>
@@ -25,7 +25,7 @@
 </header>
 
 <body>
-  <!---Barra de Busqueda-->
+  <!---Search bar-->
   <div class="topnav">
     <div class="search-container">
       <input id="formulario" type="text" placeholder="Type to Search.." name="search">
@@ -40,14 +40,28 @@
       <div class="icon"><img id="icons" src="/icons/seo.png"/></div>
     </div>
   </div>
-  <!---Sección Movies-->
+
+    <!-- filter by ascending and descending button -->
+    <div btnOrder></div>
+    <form> Sort by:
+      <select>
+        <option disabled> Select the order</option>
+        <option> From A to Z </option>
+        <option> From Z to Z </option>
+      </select>
+    </form>
+  </div>
+  
+
+  <!---Movie section-->
   <div id="rootMovies" class="rootMovies">
     <div id="listElements">
       <h2>Movies</h2>
     </div>
     <div id="ghibliMovies"></div>
   </div>
-  <!---Sección Movie selected-->
+
+  <!---Movie selected section-->
   <div id="rootMovie">
     <div id="titleElement">
       <h2>Movie:</h2>
@@ -78,7 +92,7 @@
     </div>
   </div>
 
-  <!---Sección Characters-->
+  <!---Characters section-->
   <div id="characters">somos todos los personajes</div>
 
   <script src="main.js" type="module"></script>

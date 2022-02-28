@@ -73,3 +73,16 @@ inputBox.onkeyup = (e) => {
             console.log(emptyArray);
       }
 
+// btn
+
+let btnOrder = document.getElementsByClassName("btnOrder")[0];
+btnOrder. addEventListener("click", characterFilter)
+
+function characterFilter(){
+      const allMovies = document.querySelectorAll ('titleMovie');
+      let sortBy = document.getElementById("sortBy").value;               
+      let sortOrder = document.getElementById("sortOrder").value;
+      here.innerHTML = sortData(data, sortBy, sortOrder); 
+}
+
+
