@@ -63,37 +63,50 @@
 
   <!---Movie selected section-->
   <div id="rootMovie">
-    <div id="titleElement">
+
+    <div id="movieElement" class="titles">
       <h2>Movie:</h2>
+      <h2 id="titleMovie" style="color:black; font:system-ui;"></h2>
     </div>
-    <div>
-      <h3 id="titleMovie"></h3>
-    </div>
+
+    <div class="images" style="align-items: left;">
     <img id="photoMovie" src="" alt="Poster">
-    <h2>Rate:</h2>
-    <div>
+    </div>
+
+    <div class="elementsChild">
+      <div class="subtitle">  
+      <h2>Rate: </h2>
       <p id="rateMovie"></p>
-    </div>
-    <h2>Release Date:</h2>
-    <div>
+      </div>
+      <div class="subtitle"> 
+      <h2>Release Date: </h2>
       <p id="releaseDate"></p>
+      </div>
     </div>
+
+    <div class="subtitle">
     <h2>Director:</h2>
-    <div>
-      <p id="directorMovie"></p>
+    <p id="directorMovie"></p>
     </div>
+    <div class="subtitle">
     <h2>Producer:</h2>
-    <div>
-      <p id="producerMovie"></p>
+    <p id="producerMovie"></p>
     </div>
+
+    <div class="subtitle" id="textInfo">
     <h2>Description:</h2>
-    <div>
-      <p id="descriptionMovie"></p>
+    <p id="descriptionMovie"></p>
     </div>
+
   </div>
 
   <!---Characters section-->
-  <div id="characters">somos todos los personajes</div>
+  <div id="rootCharacters" class="rootCharacters">
+    <div id="listCharacters">
+      <h2>Characters</h2>
+    </div>
+    <div id="ghibliCharacters"></div>
+  </div>
 
   <script src="main.js" type="module"></script>
 

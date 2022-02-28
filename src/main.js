@@ -22,19 +22,48 @@ const coincidenceBox = searchContainer.querySelector(".autocom-box");
 
 /*funcion para pintar los posters de las peliculas*/
 
-function mostrar(data) {
+function showMovies(data) {
       let html = "";
       data.forEach(function (film) {
             html += `
               <div id="elements" class="elements">
               <img id="photos" src="${film.poster}" alt="Poster's ${film.title}">
-              <h2 id="titles"> FILM: ${film.title}<br>SCORE: ${film.rt_score}<h2>
+              <div class="rows"><h2 class="titles1">Film:</h2><p class="infoMain">${film.title}</p></div>
+              <div class="rows"><h2 class="titles1">Score: </h2><p class="infoMain">${film.rt_score}</p></div>
               </div>
       `;
       });
       document.getElementById("ghibliMovies").innerHTML = html;
 }
-mostrar(dataFilms)
+showMovies(dataFilms)
+
+/*funcion para pintar los personajes de las peliculas*/
+
+//let dataFilms = data.films;
+//console.log(dataFilms);
+
+/*function showCharacters(data) {
+      let html = "";
+      data.forEach(function (people) {
+            html += `
+              <div id="elementsChar" class="elementsChar">
+                  <img id="photos" src="${people.img}" alt="Poster's ${people.name}">
+                  <div>
+                  <h2 class="titles1">Name:</h2><p>${people.name}</p><br>
+                  <h2 class="titles1">Specie:</h2><p>${people.specie}</p>
+                  <h2 class="titles1">Gender:</h2><p>${people.gender}</p>
+                  <h2 class="titles1">Age:</h2><p>${people.age}</p><br>
+                  </div>
+                  <div>
+                  <h2 class="titles">Eye Color:</h2><p>${people.eye_color}</p><h2 class="titles">Hair Color:</h2><p>${people.hair_color}</p>
+                  </div>
+              </div>
+      `;
+      });
+      document.getElementById("ghibliCharacters").innerHTML = html;
+}
+showCharacters(dataFilms)
+*/
 
 //console.log (filtrarPeliculas(dataFilms, 'Castle in the Sky'))
 

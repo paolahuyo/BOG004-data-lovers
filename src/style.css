@@ -1,19 +1,31 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   background-color: #ffffff;
 }
 
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
-
 header {
+  box-sizing: border-box;
   margin: auto;
   height: 100px;
   width: 100%;
   font-family: "Space Grotesk", "Gill Sans", "Gill Sans MT", Calibri,
     "Trebuchet MS", sans-serif;
+}
+
+p {
+  font-family: system-ui;
+  color: black;
+}
+
+.infoMain{
+  color: black;
+  font-size: 20px;
+  font-family: system-ui;
+  align-items: center;
+  font-weight: 700px;
 }
 
 #logo {
@@ -40,6 +52,12 @@ header {
   text-align: center;
   padding: 30px 40px;
   text-decoration: none;
+}
+
+.rows{
+  display: flex;
+  width: 300px;
+  height: 58px;
 }
 
 /*Estilos Menu y Submenu*/
@@ -203,9 +221,12 @@ header {
 
 #elements {
   width: 300px;
-  height: 480px;
+  height: 520px;
   padding: 10px;
   align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
 }
 
 #ghibliMovies{
@@ -226,6 +247,51 @@ header {
 }
 
 #rootMovie{
-  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow: hidden;
+  width: 1400px;
+  height: auto;
+  margin: 100px;
+  padding: 60px;
+  border: 2px solid #8fcad7;
+  border-radius: 10px;
+}
+
+.elementsChild{
+  overflow: hidden;
+}
+
+.titles1{
+  color:#8fcad7;
+  font-size: 20px;
+  font-family: system-ui;
+  margin-right: 6px;
   align-items: center;
+}
+
+.titles{
+  color: #ee9997;
+  font-size: 24px;
+  font-family: system-ui;
+}
+
+.subtitle{
+  float: left;
+  margin-right: 20px;
+  color: #ee9997;
+  font-size: 20px;
+  font-family: system-ui;
+}
+
+#photoMovie{
+  width: 340px;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+#textInfo{
+  float: left;
 }
