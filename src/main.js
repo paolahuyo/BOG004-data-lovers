@@ -4,6 +4,7 @@ import { filtrarPeliculas } from './data.js';
 let dataFilms = data.films;
 console.log(dataFilms);
 
+//Constantes para seccion movies
 const palabraClave = document.querySelector('#formulario');
 const send = document.querySelector('#btn-send');
 const rootMovies = document.querySelector('#rootMovies');
@@ -16,6 +17,18 @@ const releaseDate = document.querySelector('#releaseDate');
 const directorMovie = document.querySelector('#directorMovie');
 const producerMovie = document.querySelector('#producerMovie');
 
+//Constantes para seccion characters
+const rootCharacters = document.querySelector('#rootCharacters');
+const rootCharacter = document.querySelector('#rootCharacter');
+const titleChar = document.querySelector('#titleChar');
+const photoChar = document.querySelector('#photoChar');
+const specie = document.querySelector('#photoChar');
+const gender = document.querySelector('#photoChar');
+const age = document.querySelector('#photoChar');
+const eyeColor = document.querySelector('#photoChar');
+const hairColor = document.querySelector('#photoChar');
+
+//Constantes de la barra de busqueda
 const searchContainer = document.querySelector('.search-container');
 const inputBox = searchContainer.querySelector("input");
 const coincidenceBox = searchContainer.querySelector(".autocom-box");
@@ -54,7 +67,8 @@ showMovies(dataFilms)
       });
       document.getElementById("ghibliCharacters").innerHTML = html;
 }
-showCharacters(dataFilms)*/
+showCharacters(dataFilms)
+*/
 
 //console.log (filtrarPeliculas(dataFilms, 'Castle in the Sky'))
 

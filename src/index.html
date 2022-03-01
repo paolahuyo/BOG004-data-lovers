@@ -15,7 +15,7 @@
         </button>
         <div class="dropdown-content">
           <a href="index.html" id="partFilms">Movies</a>
-          <a href="#partPeople">Characters</a>
+          <a href="#rootCharacters">Characters</a>
           <a href="#partLocations">Locations</a>
           <a href="#partVehicles">Vehicles</a>
         </div>
@@ -42,12 +42,12 @@
   </div>
 
   <!-- filter by ascending and descending button -->
-  <div id="btnOrder"></div>
-  <form class="topnav">Sort by:
+  <div id="btnOrder">
+  <form class="sortSelect"><p>Sort by:
     <select>
-      <option disabled> Select the order</option>
-      <option> From A to Z </option>
-      <option> From Z to Z </option>
+      <option disabled class="boxed"> Select the order</option>
+      <option class="boxed"> From A to Z </option>
+      <option class="boxed"> From Z to Z </option>
     </select>
   </form>
   </div>
@@ -64,8 +64,7 @@
   <div id="rootMovie" class="rootElement">
 
     <div id="movieElement" class="titles">
-      <h2>Movie:</h2>
-      <h2 id="titleMovie" style="color:black; font:system-ui;"></h2>
+      <h2>Movie:</h2><h2 id="titleMovie" style="color:black; font:system-ui;"></h2>
     </div>
 
     <div class="images" style="align-items: left;">
@@ -115,7 +114,7 @@
       <h2 id="titleChar" style="color:black; font:system-ui;"></h2>
     </div>
 
-    <div class="imagesChat" style="align-items: left;">
+    <div class="imagesChar" style="align-items: left;">
       <img id="photoChar" src="" alt="Photo Character">
     </div>
 
