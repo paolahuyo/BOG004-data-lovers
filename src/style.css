@@ -15,6 +15,12 @@ header {
     "Trebuchet MS", sans-serif;
 }
 
+a{
+  margin: auto;
+  height: auto;
+  height: auto;
+}
+
 p {
   font-family: system-ui;
   color: black;
@@ -29,7 +35,7 @@ p {
 }
 
 #logo {
-  width: 280px;
+  width: 230px;
   float: left;
   padding: 0px 60px 0px 20px;
 }
@@ -182,25 +188,6 @@ p {
   left: 0;
 }
 
-@media screen and (max-width: 450px) {
-  topnav .search-container {
-    float: none;
-  }
-  .topnav a,
-  .topnav input[type="text"],
-  .topnav .search-container button {
-    float: none;
-    display: block;
-    text-align: left;
-    width: 100%;
-    margin: 0;
-    padding: 14px;
-  }
-  .topnav input[type="text"] {
-    border: 1px solid #ccc;
-  }
-}
-
 .topnav #icons{
   width: 20px;
   height: 20px;
@@ -294,4 +281,43 @@ p {
 
 #textInfo{
   float: left;
+}
+
+/* Responsive */
+@media screen and (max-width: 450px) {
+  topnav .search-container {
+    float: none;
+  }
+  .topnav a,
+  .topnav input[type="text"],
+  .topnav .search-container button {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type="text"] {
+    border: 1px solid #ccc;
+  }
+}
+@media only screen and (min-width: 640px) {
+}
+
+@media screen and (min-width:767px) {
+  header{
+    font-size: 20px;
+  }
+  .listElements{
+    display: flex;
+    justify-content: center;
+    color:#8fcad7;
+    font-size: 2px;
+    font-family: "Space Grotesk";
+  }
+
+}
+
+@media only screen and (min-width: 992px) {
 }

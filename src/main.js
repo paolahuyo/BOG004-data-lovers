@@ -102,16 +102,14 @@ inputBox.onkeyup = (e) => {
             console.log(emptyArray);
       }
 
-// btn
+// Ordenar alfabéticamente
 
 let btnOrder = document.getElementsByClassName("btnOrder")[0];
-btnOrder. addEventListener("click", characterFilter)
+btnOrder. addEventListener("click", movieFilter)
 
-function characterFilter(){
-      const allMovies = document.querySelectorAll ('titleMovie');
-      let sortBy = document.getElementById("sortBy").value;               
-      let sortOrder = document.getElementById("sortOrder").value;
-      here.innerHTML = sortData(data, sortBy, sortOrder); 
+function movieFilter(){
+      const allMovies = document.querySelector ('.titleMovie');
+     
 }
 
 
