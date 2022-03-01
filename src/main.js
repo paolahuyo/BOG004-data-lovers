@@ -35,14 +35,11 @@ function showMovies(data) {
       });
       document.getElementById("ghibliMovies").innerHTML = html;
 }
-showMovies(dataFilms)
+showMovies(data)
 
 /*funcion para pintar los personajes de las peliculas*/
 
-//let dataFilms = data.films;
-//console.log(dataFilms);
-
-/*function showCharacters(data) {
+function showCharacters(data) {
       let html = "";
       data.forEach(function (people) {
             html += `
@@ -50,12 +47,6 @@ showMovies(dataFilms)
                   <img id="photos" src="${people.img}" alt="Poster's ${people.name}">
                   <div>
                   <h2 class="titles1">Name:</h2><p>${people.name}</p><br>
-                  <h2 class="titles1">Specie:</h2><p>${people.specie}</p>
-                  <h2 class="titles1">Gender:</h2><p>${people.gender}</p>
-                  <h2 class="titles1">Age:</h2><p>${people.age}</p><br>
-                  </div>
-                  <div>
-                  <h2 class="titles">Eye Color:</h2><p>${people.eye_color}</p><h2 class="titles">Hair Color:</h2><p>${people.hair_color}</p>
                   </div>
               </div>
       `;
@@ -63,7 +54,7 @@ showMovies(dataFilms)
       document.getElementById("ghibliCharacters").innerHTML = html;
 }
 showCharacters(dataFilms)
-*/
+
 
 //console.log (filtrarPeliculas(dataFilms, 'Castle in the Sky'))
 
@@ -112,4 +103,19 @@ function movieFilter(){
      
 }
 
-
+/*Evento para mostrar la info del personaje que selecciona el usuario*/
+const cardChar = document.getElementsByClassName('elementsChar');
+for (let i = 0; i < tarjetas.length; i++) {
+      cardChar[i].addEventListener('click', () => {
+            rootCharacters.style.display = "none";
+            rootCharacter.style.display = "block";
+            titleChar.innerText = dataFilms[i].people.name;
+            photoChar.setAttribute('src', dataFilms[i].img);
+            specie.innerText = dataFilms[i].people.specie;
+            gender.innerText = dataFilms[i].people.gender;
+            age.innerText = dataFilms[i].people.age;
+            eyeColor.innerText = dataFilms[i].people.eye_color;
+            hairColor.innerText = dataFilms[i].people.hair_color;
+      })
+}
+console.log(tarjetas);
