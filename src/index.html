@@ -8,7 +8,7 @@
 </head>
 <header>
   <div class="navbar">
-    <a href="index.html"><img id="logo"  src="logos/directory-ghibli-logo.png"></a>
+    <a href="index.html"><img id="logo" src="logos/directory-ghibli-logo.png"></a>
     <div class="menu">
       <div class="dropdown">
         <button class="dropbtn">Menu<i class="fa fa-caret-down"></i>
@@ -31,38 +31,37 @@
       <input id="formulario" type="text" placeholder="Type to Search.." name="search">
       <button id="btn-send" type="send">Send</button>
       <div class="autocom-box">
-      <li id="coincidences"> sfdfsd</li>
-      <li id="coincidences"> sfdfsd</li>
-      <li id="coincidences"> sfdfsd</li>
-      <li id="coincidences"> sfdfsd</li>
-      <li id="coincidences"> sfdfsd</li>
-    </div>
-      <div class="icon"><img id="icons" src="/icons/seo.png"/></div>
+        <li id="coincidences"> sfdfsd</li>
+        <li id="coincidences"> sfdfsd</li>
+        <li id="coincidences"> sfdfsd</li>
+        <li id="coincidences"> sfdfsd</li>
+        <li id="coincidences"> sfdfsd</li>
+      </div>
+      <div class="icon"><img id="icons" src="/icons/seo.png" /></div>
     </div>
   </div>
 
-    <!-- filter by ascending and descending button -->
-    <div btnOrder></div>
-    <form> Sort by:
-      <select>
-        <option disabled> Select the order</option>
-        <option> From A to Z </option>
-        <option> From Z to Z </option>
-      </select>
-    </form>
+  <!-- filter by ascending and descending button -->
+  <div id="btnOrder"></div>
+  <form class="topnav">Sort by:
+    <select>
+      <option disabled> Select the order</option>
+      <option> From A to Z </option>
+      <option> From Z to Z </option>
+    </select>
+  </form>
   </div>
-  
 
   <!---Movie section-->
   <div id="rootMovies" class="rootMovies">
-    <div id="listElements">
+    <div class="listElements">
       <h2>Movies</h2>
     </div>
     <div id="ghibliMovies"></div>
   </div>
 
   <!---Movie selected section-->
-  <div id="rootMovie">
+  <div id="rootMovie" class="rootElement">
 
     <div id="movieElement" class="titles">
       <h2>Movie:</h2>
@@ -70,46 +69,46 @@
     </div>
 
     <div class="images" style="align-items: left;">
-    <img id="photoMovie" src="" alt="Poster">
+      <img id="photoMovie" src="" alt="Poster">
     </div>
 
     <div class="elementsChild">
-      <div class="subtitle">  
-      <h2>Rate: </h2>
-      <p id="rateMovie"></p>
+      <div class="subtitle">
+        <h2>Rate: </h2>
+        <p id="rateMovie"></p>
       </div>
-      <div class="subtitle"> 
-      <h2>Release Date: </h2>
-      <p id="releaseDate"></p>
+      <div class="subtitle">
+        <h2>Release Date: </h2>
+        <p id="releaseDate"></p>
       </div>
     </div>
 
     <div class="subtitle">
-    <h2>Director:</h2>
-    <p id="directorMovie"></p>
+      <h2>Director:</h2>
+      <p id="directorMovie"></p>
     </div>
     <div class="subtitle">
-    <h2>Producer:</h2>
-    <p id="producerMovie"></p>
+      <h2>Producer:</h2>
+      <p id="producerMovie"></p>
     </div>
 
     <div class="subtitle" id="textInfo">
-    <h2>Description:</h2>
-    <p id="descriptionMovie"></p>
+      <h2>Description:</h2>
+      <p id="descriptionMovie"></p>
     </div>
 
   </div>
 
   <!---Characters section-->
   <div id="rootCharacters" class="rootCharacters">
-    <div id="listCharacters">
+    <div class="listElements">
       <h2>Characters</h2>
     </div>
     <div id="ghibliCharacters"></div>
   </div>
 
   <!---Character selected section-->
-  <div id="rootCharacter">
+  <div id="rootCharacter" class="rootElement">
 
     <div id="charElement" class="titles">
       <h2>Character Name:</h2>
@@ -117,38 +116,40 @@
     </div>
 
     <div class="imagesChat" style="align-items: left;">
-    <img id="photoChar" src="" alt="Photo Character">
+      <img id="photoChar" src="" alt="Photo Character">
     </div>
 
     <div class="elementsChild">
-      <div class="subtitle">  
-      <h2>Specie:</h2>
-      <p id="specie"></p>
+      <div class="subtitle">
+        <h2>Specie:</h2>
+        <p id="specie"></p>
       </div>
-      <div class="subtitle"> 
-      <h2>Gender:</h2>
-      <p id="gender"></p>
+      <div class="subtitle">
+        <h2>Gender:</h2>
+        <p id="gender"></p>
       </div>
     </div>
 
     <div class="subtitle">
-    <h2>Age:</h2>
-    <p id="age"></p>
+      <h2>Age:</h2>
+      <p id="age"></p>
     </div>
     <div class="subtitle">
-    <h2>Eye Color:</h2>
-    <p id="eyeColor"></p>
+      <h2>Eye Color:</h2>
+      <p id="eyeColor"></p>
     </div>
     <div class="subtitle" id="textInfo">
-    <h2>Hair Color:</h2>
-    <p id="hairColor"></p>
+      <h2>Hair Color:</h2>
+      <p id="hairColor"></p>
     </div>
 
   </div>
 
 
   <script src="main.js" type="module"></script>
-
 </body>
-<footer> © Copyrigth 2022 Laura y Paola | All Rights Reserved</footer>
+<footer>
+  © Copyright 2022 Laura Castellanos y Paola Huyó | All Rights Reserved
+</footer>
+
 </html>

@@ -35,13 +35,14 @@ function showMovies(data) {
       });
       document.getElementById("ghibliMovies").innerHTML = html;
 }
-showMovies(data)
+showMovies(dataFilms)
 
 /*funcion para pintar los personajes de las peliculas*/
 
-function showCharacters(data) {
+/*function showCharacters(dataF) {
       let html = "";
-      data.forEach(function (people) {
+      dataF.forEach(function (people) {
+            for(let i=0; i<dataF.people.lenght, i++){
             html += `
               <div id="elementsChar" class="elementsChar">
                   <img id="photos" src="${people.img}" alt="Poster's ${people.name}">
@@ -49,12 +50,11 @@ function showCharacters(data) {
                   <h2 class="titles1">Name:</h2><p>${people.name}</p><br>
                   </div>
               </div>
-      `;
+      `;}
       });
       document.getElementById("ghibliCharacters").innerHTML = html;
 }
-showCharacters(dataFilms)
-
+showCharacters(dataFilms)*/
 
 //console.log (filtrarPeliculas(dataFilms, 'Castle in the Sky'))
 
@@ -64,6 +64,8 @@ for (let i = 0; i < tarjetas.length; i++) {
       tarjetas[i].addEventListener('click', () => {
             rootMovies.style.display = "none";
             rootMovie.style.display = "block";
+            rootCharacters.style.display = "none";
+            rootCharacter.style.display = "none";
             titleMovie.innerText = dataFilms[i].title;
             photoMovie.setAttribute('src', dataFilms[i].poster);
             rateMovie.innerText = dataFilms[i].rt_score;
@@ -74,6 +76,7 @@ for (let i = 0; i < tarjetas.length; i++) {
       })
 }
 console.log(tarjetas);
+
 
 /*Evento del botón Search*/
 send.addEventListener('click', () => filtrarPeliculas(dataFilms, palabraClave))
@@ -94,19 +97,20 @@ inputBox.onkeyup = (e) => {
       }
 
 // Ordenar alfabéticamente
-
+/*
 let btnOrder = document.getElementsByClassName("btnOrder")[0];
 btnOrder. addEventListener("click", movieFilter)
 
 function movieFilter(){
-      const allMovies = document.querySelector ('.titleMovie');
-     
+      const allMovies = document.querySelector ('.titleMovie');  
 }
 
 /*Evento para mostrar la info del personaje que selecciona el usuario*/
-const cardChar = document.getElementsByClassName('elementsChar');
-for (let i = 0; i < tarjetas.length; i++) {
+/*const cardChar = document.getElementsByClassName('elementsChar');
+for (let i = 0; i < cardChar.length; i++) {
       cardChar[i].addEventListener('click', () => {
+            rootMovies.style.display = "none";
+            rootMovie.style.display = "none";
             rootCharacters.style.display = "none";
             rootCharacter.style.display = "block";
             titleChar.innerText = dataFilms[i].people.name;
@@ -118,4 +122,5 @@ for (let i = 0; i < tarjetas.length; i++) {
             hairColor.innerText = dataFilms[i].people.hair_color;
       })
 }
-console.log(tarjetas);
+console.log(cardChar);
+*/
