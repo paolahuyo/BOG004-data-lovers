@@ -1,5 +1,5 @@
 import data from './data/ghibli/ghibli.js';
-import { filtrarPeliculas } from './data.js';
+import { filtrarPeliculas, filtrarAsDs } from './data.js';
 
 let dataFilms = data.films;
 console.log(dataFilms);
@@ -101,6 +101,13 @@ inputBox.onkeyup = (e) => {
 
 /*Evento del botón Search*/
 send.addEventListener('click', () => filtrarPeliculas(dataFilms, userData))
+
+/* Evento del botón A from Z */
+boxedA.addEventListener('click', filtrarAsDs)
+
+/* Evento del botón Z from A */
+// boxedB.addEventListener('click', filtrarAsDs)
+
       
 // Ordenar alfabéticamente
 /*

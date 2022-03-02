@@ -5,3 +5,9 @@ export function filtrarPeliculas (data, palabraClave){
   })
 }
 
+export function filtrarAsDs (data, titleMovie){
+  let titleData = titleMovie.map((ele) => ele.title);
+  let sortData = Array.from(new Set(titleData.sort()));
+  return sortData;
+  console.log(sortData)
+}
