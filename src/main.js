@@ -92,18 +92,22 @@ for (let i = 0; i < tarjetas.length; i++) {
 console.log(tarjetas);
 
 /*funcion buscar coincidencias en el input del usuario*/
-
+let userData;
 inputBox.onkeyup = (e) => {
       console.log(e.target.value);
-      let userData = e.target.value;
+      userData = e.target.value;
       return userData;
 }
 
 /*Evento del botón Search*/
-send.addEventListener('click', () => filtrarPeliculas(dataFilms, userData))
+
+ send.addEventListener('click', () => console.log (filtrarPeliculas(dataFilms, userData)))
 
 /* Evento del botón A from Z */
-boxedA.addEventListener('click', filtrarAsDs)
+document.getElementById("order").addEventListener('change', () => {
+      let value = document.getElementById("order").value
+      filtrarAsDs(dataFilms, value)
+})
 
 /* Evento del botón Z from A */
 // boxedB.addEventListener('click', filtrarAsDs)
