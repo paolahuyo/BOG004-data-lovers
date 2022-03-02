@@ -106,7 +106,7 @@ inputBox.onkeyup = (e) => {
 /* Evento del botón A from Z */
 document.getElementById("order").addEventListener('change', () => {
       let value = document.getElementById("order").value
-      filtrarAsDs(dataFilms, value)
+      console.log(filtrarAsDs(dataFilms, value));
 })
 
 /* Evento del botón Z from A */
