@@ -91,25 +91,17 @@ for (let i = 0; i < tarjetas.length; i++) {
 }
 console.log(tarjetas);
 
-
-/*Evento del botón Search*/
-send.addEventListener('click', () => filtrarPeliculas(dataFilms, palabraClave))
-
-
 /*funcion buscar coincidencias en el input del usuario*/
 
 inputBox.onkeyup = (e) => {
       console.log(e.target.value);
       let userData = e.target.value;
-      let emptyArray = [];
-      if (userData) {
-            emptyArray = data.filter((data)=>{
-            return element.title.toLowerCase() == data.toLowerCase()
-            })
-            };
-            console.log(emptyArray);
-      }
+      return userData;
+}
 
+/*Evento del botón Search*/
+send.addEventListener('click', () => filtrarPeliculas(dataFilms, userData))
+      
 // Ordenar alfabéticamente
 /*
 let btnOrder = document.getElementsByClassName("btnOrder")[0];
