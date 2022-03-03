@@ -1,10 +1,7 @@
 export function filtrarPeliculas(data,palabraClave){
-  console.log(palabraClave);
-  console.log(data);
-    return data.filter((element)=>{
-      title.toLowerCase().includes(palabraClave.toLowerCase());
+  return data.filter((element)=>{
+  return element.title.toLowerCase().includes(palabraClave.toLowerCase());
       })
-    }
 }
 
 export function filtrarAsDs (data, order){
