@@ -296,7 +296,7 @@ export default {
         {
           "id": "c491755a-407d-4d6e-b58a-240ec78b5061",
           "name": "Chibi Totoro",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/c/c5/Little_Totoro_spirit_moving.gif",
+          "img": "https://cdn.shopify.com/s/files/1/0185/4636/products/Chibi_Totoro.png?v=1616628140",
           "gender": "NA",
           "age": "",
           "eye_color": "Black",
@@ -710,7 +710,7 @@ export default {
         {
           "id": "4a2e2cee-08ca-4d44-9564-2b3e5421bafb",
           "name": "Fio Piccolo",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/1/16/Fio_%282%29.jpg",
+          "img": "https://static.wikia.nocookie.net/studioghibli/images/c/c2/Fio_Piccolo.jpg/revision/latest/scale-to-width-down/360?cb=20200613031906&path-prefix=es",
           "gender": "Female",
           "age": "17",
           "eye_color": "Brown",
@@ -1021,7 +1021,7 @@ export default {
         {
           "id": "34277bec-7401-43fa-a00a-5aee64b45b08",
           "name": "Eboshi",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/9f/Eboshi.png",
+          "img": "https://cdn.anisearch.es/images/character/cover/full/7/7404.webp",
           "gender": "Female",
           "age": "Adult",
           "eye_color": "Hazel",
@@ -1497,7 +1497,7 @@ export default {
         {
           "id": "1287b275-6c32-4113-947f-519316d4a6be",
           "name": "Witch of the Waste",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/e/e1/Howls-moving-castle-disneyscreencaps.com-10507.jpg",
+          "img": "https://static.wikia.nocookie.net/howlscastle/images/e/e7/64074.jpg/revision/latest?cb=20091029023030",
           "gender": "Female",
           "age": "59",
           "eye_color": "Brown",
