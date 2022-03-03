@@ -103,14 +103,12 @@ inputBox.onkeyup = (e) => {
 
  send.addEventListener('click', () => console.log (filtrarPeliculas(dataFilms, userData)))
 
-/* Evento del botón A from Z */
+/* Evento de ordenar alfabéticamente */
 document.getElementById("order").addEventListener('change', () => {
       let value = document.getElementById("order").value
       console.log(filtrarAsDs(dataFilms, value));
+      showMovies(filtrarAsDs(dataFilms, value));
 })
-
-/* Evento del botón Z from A */
-// boxedB.addEventListener('click', filtrarAsDs)
 
       
 // Ordenar alfabéticamente
