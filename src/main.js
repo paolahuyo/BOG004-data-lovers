@@ -2,6 +2,7 @@ import data from './data/ghibli/ghibli.js';
 import { filtrarPeliculas, filtrarAsDs } from './data.js';
 
 let dataFilms = data.films;
+const btnOrder = document.querySelector('#btnOrder');
 
 //Constantes para seccion movies
 const palabraClave = document.querySelector('#formulario');
@@ -56,6 +57,7 @@ for (let i = 0; i < tarjetas.length; i++) {
             rootMovie.style.display = "block";
             rootCharacters.style.display = "none";
             rootCharacter.style.display = "none";
+            btnOrder.style.display="none";
             titleMovie.innerText = dataFilms[i].title;
             photoMovie.setAttribute('src', dataFilms[i].poster);
             rateMovie.innerText = dataFilms[i].rt_score;
@@ -95,6 +97,7 @@ for (let i = 0; i<cardChar.length; i++) {
             rootMovie.style.display = "none";
             rootCharacters.style.display = "none";
             rootCharacter.style.display = "block";
+            btnOrder.style.display="none";
             titleChar.innerText = cardChar[i].people.name;
             photoChar.setAttribute('src', cardChar[i].people.img);
             specie.innerText = cardChar[i].people.specie;
@@ -128,7 +131,7 @@ function showCoincidences(arrayResults){
                   <li id="coincidence">${arrayResults[i].title}</li>
                   </div>
                   `
-                  document.getElementById("coincidence").addEventListener('click', () => {
+                  /*document.getElementById("coincidence").addEventListener('click', () => {
                               rootMovies.style.display = "none";
                               rootMovie.style.display = "block";
                               rootCharacters.style.display = "none";
@@ -140,7 +143,7 @@ function showCoincidences(arrayResults){
                               directorMovie.innerText = arrayResults[i].director;
                               producerMovie.innerText = arrayResults[i].producer;
                               descriptionMovie.innerText = arrayResults[i].description;
-                        })
+                        })*/
             }
 
       } else {
