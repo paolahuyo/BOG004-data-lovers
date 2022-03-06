@@ -710,7 +710,7 @@ export default {
         {
           "id": "4a2e2cee-08ca-4d44-9564-2b3e5421bafb",
           "name": "Fio Piccolo",
-          "img": "https://static.wikia.nocookie.net/studioghibli/images/c/c2/Fio_Piccolo.jpg/revision/latest/scale-to-width-down/360?cb=20200613031906&path-prefix=es",
+          "img": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgsnm-fKNZYTjtsnSXMLGQUfXCe36ClDjizg&usqp=CAU",
           "gender": "Female",
           "age": "17",
           "eye_color": "Brown",
@@ -1497,7 +1497,7 @@ export default {
         {
           "id": "1287b275-6c32-4113-947f-519316d4a6be",
           "name": "Witch of the Waste",
-          "img": "https://static.wikia.nocookie.net/howlscastle/images/e/e7/64074.jpg/revision/latest?cb=20091029023030",
+          "img": "http://animeperson.com/images/character/1618e10d9d.jpg",
           "gender": "Female",
           "age": "59",
           "eye_color": "Brown",
@@ -1527,8 +1527,7 @@ export default {
         {
           "id": "45237428-93bf-4dd6-97ce-f10647300429",
           "name": "Prince Justin or Turnip Head",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d9/Prince_Justin.png",
-          "gender": "Male",
+          "img": "http://pm1.narvii.com/6510/a5e67e4ea319ba60073a0b898543091c3067b347_00.jpg",
           "age": "20-30",
           "eye_color": "Grey",
           "hair_color": "Blonde",
@@ -2330,7 +2329,7 @@ export default {
         {
           "id": "28d07ace-c309-48c6-b48e-ae2ece3a238c",
           "name": "Anna Sasaki",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/a/ae/Anna.png",
+          "img": "https://cdn.anisearch.es/images/character/cover/full/51/51329.webp",
           "gender": "Female",
           "age": "12",
           "eye_color": "Blue",
@@ -2360,7 +2359,7 @@ export default {
         {
           "id": "66bca178-9920-4ec3-91e9-0d5b8a76dba1",
           "name": "Setsu Oiwa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/6/6e/Setsu.jpg",
+          "img": "https://s4.anilist.co/file/anilistcdn/character/large/b144277-z6XMVEi8Y4nV.jpg",
           "gender": "Female",
           "age": "50-60",
           "eye_color": "Dark brown",
@@ -2370,8 +2369,7 @@ export default {
         {
           "id": "5b8e4413-f943-40ba-8f9f-0ba059a401f0",
           "name": "Hisako",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/9/93/Hisako.png",
-          "gender": "Female",
+          "img": "https://cdn.myanimelist.net/images/characters/15/250957.jpg",
           "age": "Elder",
           "eye_color": "Dark brown",
           "hair_color": "Grey",
@@ -2400,7 +2398,7 @@ export default {
         {
           "id": "31b49ef6-ee60-4603-b983-e67fa0718aa9",
           "name": "Kiyomasa Ōiwa",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/d/d7/Kiyomasa.jpg",
+          "img": "https://elvortex.com/wp-content/uploads/2014/07/gh4.jpg",
           "gender": "Male",
           "age": "50-60",
           "eye_color": "Dark brown",
@@ -2410,7 +2408,7 @@ export default {
         {
           "id": "5d52d16f-ce72-41bd-8d88-436e206d9449",
           "name": "Doctor Yamashita",
-          "img": "https://static.wikia.nocookie.net/studio-ghibli/images/8/8a/Yamashita.jpg",
+          "img": "https://ami.animecharactersdatabase.com/uploads/chars/thumbs/200/23275-228597788.jpg",
           "gender": "Male",
           "age": "Adult",
           "eye_color": "Black",

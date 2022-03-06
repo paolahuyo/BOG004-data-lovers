@@ -1,23 +1,60 @@
-import { example, anotherExample } from '../src/data.js';
+import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
+import { filtrarPeliculas, filtrarAsDs } from '../src/data.js';
+import { showMovies,showCharacters, showCoincidences, showInfoCard} from '../src/main.js';
 
-
-describe('example', () => {
-  it('is a function', () => {
-    expect(typeof example).toBe('function');
-  });
-
-  it('returns `example`', () => {
-    expect(example()).toBe('example');
+describe('filtrarPelículas', () =>{
+  it('is a function', () =>{
+    expect(typeof filtrarPeliculas).toBe('function');
   });
 });
 
-
-describe('anotherExample', () => {
-  it('is a function', () => {
-    expect(typeof anotherExample).toBe('function');
-  });
-
-  it('returns `anotherExample`', () => {
-    expect(anotherExample()).toBe('OMG');
+describe('filtrarAsDs', () =>{
+  it('is a function', () =>{
+    expect(typeof filtrarAsDs).toBe('function');
   });
 });
+
+describe('showMovies', () =>{
+  it('is a function', () =>{
+    expect(typeof showMovies).toBe('function');
+  });
+});
+
+describe('showCharacters', () =>{
+  it('is a function', () =>{
+    expect(typeof showCharacters).toBe('function');
+  });
+});
+
+describe('showCoincidences', () =>{
+  it('is a function', () =>{
+    expect(typeof showCoincidences).toBe('function');
+  });
+});
+
+describe('showInfoCard', () =>{
+  it('is a function', () =>{
+    expect(typeof showInfoCard).toBe('function');
+  });
+});
+
+// describe('example', () => {
+//   it('is a function', () => {
+//     expect(typeof example).toBe('function');
+//   });
+
+//   it('returns `example`', () => {
+//     expect(example()).toBe('example');
+//   });
+// });
+
+
+// describe('anotherExample', () => {
+//   it('is a function', () => {
+//     expect(typeof anotherExample).toBe('function');
+//   });
+
+//   it('returns `anotherExample`', () => {
+//     expect(anotherExample()).toBe('OMG');
+//   });
+// });
