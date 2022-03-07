@@ -27,7 +27,7 @@ const gender = document.querySelector('#photoChar');
 const age = document.querySelector('#photoChar');
 const eyeColor = document.querySelector('#photoChar');
 const hairColor = document.querySelector('#photoChar');
-
+const characters = document.querySelector('#partCharacters');
 
 //Constantes de la barra de busqueda
 const searchContainer = document.querySelector('.search-container');
@@ -52,7 +52,6 @@ function showMovies(data) {
 showMovies(dataFilms)
 
 /*Función para mostrar la info de la pelicula que selecciona el usuario*/
-
 function renderMovie (tarjetas) {
       for (let i = 0; i < tarjetas.length; i++) {
             tarjetas[i].addEventListener('click', () => {
@@ -118,8 +117,8 @@ showCharacters(dataFilms)
 const cardChar = document.getElementsByClassName('elementsChar');
 for (let i = 0; i<cardChar.length; i++) {
       cardChar[i].addEventListener('click', (event) => {
-            let nameFiltered = dataFilms.filter((element)=> element.people(event.target.dataset.id));
-            console.log('personaje', event.target.dataset, nameFiltered);
+            //let nameFiltered = dataFilms.filter((element)=> element.people(event.target.dataset.id));
+            console.log('personaje', event.target.dataset);
             rootMovies.style.display = "none";
             rootMovie.style.display = "none";
             rootCharacters.style.display = "none";
@@ -134,6 +133,16 @@ for (let i = 0; i<cardChar.length; i++) {
             hairColor.innerText = cardChar[i].people.hair_color;
       })
 }
+
+//Evento para llamar a todos los personajes de Ghibli
+characters.addEventListener('click', ()=>{
+      rootMovies.style.display = "none";
+      rootMovie.style.display = "none";
+      rootCharacters.style.display = "block";
+      rootCharacter.style.display = "none";
+      btnOrder.style.display="none";
+      searchContainer.style.display="none";
+})
 
 /*función buscar coincidencias en el input del usuario*/
 let userData=0;
