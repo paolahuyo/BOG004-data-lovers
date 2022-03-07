@@ -10,7 +10,7 @@ export function filtrarAsDs (data, order){
     ? 1
     :-1;
   })
-   console.log (titleSort)
+   //console.log (titleSort)
    if (order === 'az'){titleSort}
    if (order === 'za'){titleSort.reverse()}
 

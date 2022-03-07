@@ -5,7 +5,6 @@ let dataFilms = data.films;
 const btnOrder = document.querySelector('#btnOrder');
 
 //Constantes para seccion movies
-const palabraClave = document.querySelector('#formulario');
 const send = document.querySelector('#btn-send');
 const rootMovies = document.querySelector('#rootMovies');
 const rootMovie = document.querySelector('#rootMovie');
@@ -16,22 +15,25 @@ const rateMovie = document.querySelector('#rateMovie');
 const releaseDate = document.querySelector('#releaseDate');
 const directorMovie = document.querySelector('#directorMovie');
 const producerMovie = document.querySelector('#producerMovie');
+const tarjetas = document.getElementsByClassName('elements');
 
 //Constantes para seccion characters
 const rootCharacters = document.querySelector('#rootCharacters');
 const rootCharacter = document.querySelector('#rootCharacter');
-const titleChar = document.querySelector('#titleChar');
+/*const titleChar = document.querySelector('#titleChar');
 const photoChar = document.querySelector('#photoChar');
 const specie = document.querySelector('#photoChar');
 const gender = document.querySelector('#photoChar');
 const age = document.querySelector('#photoChar');
 const eyeColor = document.querySelector('#photoChar');
 const hairColor = document.querySelector('#photoChar');
+*/
 
 //Constantes de la barra de busqueda
 const searchContainer = document.querySelector('.search-container');
 const inputBox = searchContainer.querySelector("input");
 const coincidenceBox = searchContainer.querySelector(".autocom-box");
+//const coincidence = searchContainer.querySelector("coincidence");
 
 /*funcion para pintar los posters de las peliculas*/
 function showMovies(data) {
@@ -49,25 +51,48 @@ function showMovies(data) {
 }
 showMovies(dataFilms)
 
-/*Evento para mostrar la info de la pelicula que selecciona el usuario*/
-const tarjetas = document.getElementsByClassName('elements');
-for (let i = 0; i < tarjetas.length; i++) {
-      tarjetas[i].addEventListener('click', () => {
-            rootMovies.style.display = "none";
-            rootMovie.style.display = "block";
-            rootCharacters.style.display = "none";
-            rootCharacter.style.display = "none";
-            btnOrder.style.display="none";
-            titleMovie.innerText = dataFilms[i].title;
-            photoMovie.setAttribute('src', dataFilms[i].poster);
-            rateMovie.innerText = dataFilms[i].rt_score;
-            releaseDate.innerText = dataFilms[i].release_date;
-            directorMovie.innerText = dataFilms[i].director;
-            producerMovie.innerText = dataFilms[i].producer;
-            descriptionMovie.innerText = dataFilms[i].description;
-      })
+/*Función para mostrar la info de la pelicula que selecciona el usuario*/
+
+function renderMovie (tarjetas) {
+      for (let i = 0; i < tarjetas.length; i++) {
+            tarjetas[i].addEventListener('click', () => {
+                  rootMovies.style.display = "none";
+                  rootMovie.style.display = "block";
+                  rootCharacters.style.display = "none";
+                  rootCharacter.style.display = "none";
+                  btnOrder.style.display="none";
+                  titleMovie.innerText = dataFilms[i].title;
+                  photoMovie.setAttribute('src', dataFilms[i].poster);
+                  rateMovie.innerText = dataFilms[i].rt_score;
+                  releaseDate.innerText = dataFilms[i].release_date;
+                  directorMovie.innerText = dataFilms[i].director;
+                  producerMovie.innerText = dataFilms[i].producer;
+                  descriptionMovie.innerText = dataFilms[i].description;
+            })
+      }
 }
-console.log(tarjetas);
+renderMovie(tarjetas)
+
+/*función para que ir a la info de la peli seleccionada desde el buscador*/
+
+/*function showMovieSearch (data,selection) {
+      let result = data.filter((element)=> element.title == selection)
+      for (let i = 0; i < result.length; i++) {
+            titleMovie.innerText = result[i].title;
+            photoMovie.setAttribute('src', result[i].poster);
+            rateMovie.innerText = result[i].rt_score;
+            releaseDate.innerText = result[i].release_date;
+            directorMovie.innerText = result[i].director;
+            producerMovie.innerText = result[i].producer;
+            descriptionMovie.innerText = result[i].description;
+      }
+}*/
+
+//console.log(coincidence);
+//console.log(coincidenceBox);
+coincidenceBox.addEventListener ('change', ()=>{
+      //console.log(coincidenceBox.value);
+})
 
 /*funcion para pintar los personajes de las peliculas*/
 function showCharacters(dataF) {
@@ -76,7 +101,7 @@ function showCharacters(dataF) {
             film.people.forEach(function(people){
                   html += `
                         <div id="elementsChar" class="elementsChar">
-                        <img id="photosChar" src="${people.img}" alt="Poster's ${people.name}">
+                        <img id="photosChar" src="${people.img}" alt="Poster's ${people.name}" name="${people.name}">
                         <div class="infoCenter">
                         <h2 class="titles1">Name:</h2><p>${people.name}</p><br>
                         </div>
@@ -88,11 +113,26 @@ function showCharacters(dataF) {
 }
 showCharacters(dataFilms)
 
+
+function arrayCharacters (data){
+      let dataChar = [];
+      data.forEach(function(film){
+            film.people.forEach(function(){
+            dataChar += 
+            console.log(dataChar);
+            })
+      })
+}
+
+arrayCharacters(dataFilms);
+
 /*Evento para mostrar la info del personaje que selecciona el usuario*/
-const cardChar = document.getElementsByClassName('elementsChar');
+
+/*const cardChar = document.getElementsByClassName('elementsChar');
 for (let i = 0; i<cardChar.length; i++) {
-      cardChar[i].addEventListener('click', () => {
-            console.log(cardChar);
+      cardChar[i].addEventListener('click', (event) => {
+            //let nameFiltered = dataFilms.filter((element)=> element.people.name.includes(event.target.name))
+            //console.log('personaje', event.target.name, nameFiltered);
             rootMovies.style.display = "none";
             rootMovie.style.display = "none";
             rootCharacters.style.display = "none";
@@ -106,12 +146,12 @@ for (let i = 0; i<cardChar.length; i++) {
             eyeColor.innerText = cardChar[i].people.eye_color;
             hairColor.innerText = cardChar[i].people.hair_color;
       })
-}
+}*/
 
 /*función buscar coincidencias en el input del usuario*/
-let userData;
+let userData=0;
 inputBox.onkeyup = (e) => {
-      console.log(e.target.value);
+      //console.log(e.target.value);
       userData = e.target.value;
       coincidenceBox.style.display = "none";
       return userData;
@@ -131,19 +171,6 @@ function showCoincidences(arrayResults){
                   <li id="coincidence">${arrayResults[i].title}</li>
                   </div>
                   `
-                  /*document.getElementById("coincidence").addEventListener('click', () => {
-                              rootMovies.style.display = "none";
-                              rootMovie.style.display = "block";
-                              rootCharacters.style.display = "none";
-                              rootCharacter.style.display = "none";
-                              titleMovie.innerText = arrayResults[i].title;
-                              photoMovie.setAttribute('src', arrayResults[i].poster);
-                              rateMovie.innerText = arrayResults[i].rt_score;
-                              releaseDate.innerText = arrayResults[i].release_date;
-                              directorMovie.innerText = arrayResults[i].director;
-                              producerMovie.innerText = arrayResults[i].producer;
-                              descriptionMovie.innerText = arrayResults[i].description;
-                        })*/
             }
 
       } else {
@@ -151,18 +178,9 @@ function showCoincidences(arrayResults){
       }
  }
 
-/*Función mostrar película desde la busqueda*/
-
-/*function selectMovie (data,index){
-
-
-*/
-
-
 /* Evento de ordenar alfabéticamente */
-document.getElementById("order").addEventListener('change', () => {
-      let value = document.getElementById("order").value
-      console.log(filtrarAsDs(dataFilms, value));
+document.getElementById("order").addEventListener('change',() => {
+      let value = document.getElementById("order").value;
       showMovies(filtrarAsDs(dataFilms, value));
       showInfoCard(dataFilms);
 })
@@ -170,10 +188,8 @@ document.getElementById("order").addEventListener('change', () => {
 /*Función para mostrar la info de la película seleccionada después de filtrar alfabéticamente*/
 function showInfoCard (data) {
       const tarjetasOrdered = document.getElementsByClassName('elements');
-      console.log(tarjetasOrdered);
       for (let i = 0; i < tarjetasOrdered.length; i++) {
             tarjetasOrdered[i].addEventListener('click', () => {
-            console.log("hola");
             rootMovies.style.display = "none";
             rootMovie.style.display = "block";
             rootCharacters.style.display = "none";
@@ -188,6 +204,4 @@ function showInfoCard (data) {
             descriptionMovie.innerText = data[i].description;
             })
       }
-      console.log(tarjetasOrdered); 
 } 
-

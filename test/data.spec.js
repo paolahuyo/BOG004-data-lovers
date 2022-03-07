@@ -1,6 +1,6 @@
 import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
 import { filtrarPeliculas, filtrarAsDs } from '../src/data.js';
-import { showMovies,showCharacters, showCoincidences, showInfoCard} from '../src/main.js';
+import { showMovies, showCharacters, showCoincidences, showInfoCard } from '../src/main.js';
 
 describe('filtrarPelículas', () =>{
   it('is a function', () =>{
@@ -14,10 +14,17 @@ describe('filtrarAsDs', () =>{
   });
 });
 
-describe('showMovies', () =>{
-  it('is a function', () =>{
+describe('showMovies',() =>{
+  it('is a function',() =>{
     expect(typeof showMovies).toBe('function');
+    const elements = showMovies ()
+    expect(elements instanceof HTMLElement).toBe(true)
   });
+  it.only('Should print 20 elements',() => {
+    const cards = showMovies();
+    const result = cards.querySelectorAll('.tarjeta')
+    expect(result.length).toBe(20)
+  })
 });
 
 describe('showCharacters', () =>{
