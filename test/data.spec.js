@@ -12,6 +12,12 @@ describe('filtrarAsDs', () =>{
   it('is a function', () =>{
     expect(typeof filtrarAsDs).toBe('function');
   });
+  describe("descending order for name ", () => {
+    it("descending order for name", () => {
+      const result = filtrarAsDs(data, order);
+      expect(result[0].title).toEqual("Whisper of the Heart");
+    });
+  });
 });
 
 describe('showMovies',() =>{

@@ -20,14 +20,14 @@ const tarjetas = document.getElementsByClassName('elements');
 //Constantes para seccion characters
 const rootCharacters = document.querySelector('#rootCharacters');
 const rootCharacter = document.querySelector('#rootCharacter');
-/*const titleChar = document.querySelector('#titleChar');
+const titleChar = document.querySelector('#titleChar');
 const photoChar = document.querySelector('#photoChar');
 const specie = document.querySelector('#photoChar');
 const gender = document.querySelector('#photoChar');
 const age = document.querySelector('#photoChar');
 const eyeColor = document.querySelector('#photoChar');
 const hairColor = document.querySelector('#photoChar');
-*/
+
 
 //Constantes de la barra de busqueda
 const searchContainer = document.querySelector('.search-container');
@@ -101,7 +101,7 @@ function showCharacters(dataF) {
             film.people.forEach(function(people){
                   html += `
                         <div id="elementsChar" class="elementsChar">
-                        <img id="photosChar" src="${people.img}" alt="Poster's ${people.name}" name="${people.name}">
+                        <img data-id="${people.id}" id="photosChar" src="${people.img}" alt="Poster's ${people.name}" name="${people.name}">
                         <div class="infoCenter">
                         <h2 class="titles1">Name:</h2><p>${people.name}</p><br>
                         </div>
@@ -113,26 +113,13 @@ function showCharacters(dataF) {
 }
 showCharacters(dataFilms)
 
-
-function arrayCharacters (data){
-      let dataChar = [];
-      data.forEach(function(film){
-            film.people.forEach(function(){
-            dataChar += 
-            console.log(dataChar);
-            })
-      })
-}
-
-arrayCharacters(dataFilms);
-
 /*Evento para mostrar la info del personaje que selecciona el usuario*/
 
-/*const cardChar = document.getElementsByClassName('elementsChar');
+const cardChar = document.getElementsByClassName('elementsChar');
 for (let i = 0; i<cardChar.length; i++) {
       cardChar[i].addEventListener('click', (event) => {
-            //let nameFiltered = dataFilms.filter((element)=> element.people.name.includes(event.target.name))
-            //console.log('personaje', event.target.name, nameFiltered);
+            let nameFiltered = dataFilms.filter((element)=> element.people(event.target.dataset.id));
+            console.log('personaje', event.target.dataset, nameFiltered);
             rootMovies.style.display = "none";
             rootMovie.style.display = "none";
             rootCharacters.style.display = "none";
@@ -146,7 +133,7 @@ for (let i = 0; i<cardChar.length; i++) {
             eyeColor.innerText = cardChar[i].people.eye_color;
             hairColor.innerText = cardChar[i].people.hair_color;
       })
-}*/
+}
 
 /*función buscar coincidencias en el input del usuario*/
 let userData=0;
