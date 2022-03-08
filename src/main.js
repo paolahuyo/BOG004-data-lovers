@@ -21,11 +21,11 @@ const rootCharacters = document.querySelector('#rootCharacters');
 const rootCharacter = document.querySelector('#rootCharacter');
 const titleChar = document.querySelector('#titleChar');
 const photoChar = document.querySelector('#photoChar');
-const specie = document.querySelector('#photoChar');
-const gender = document.querySelector('#photoChar');
-const age = document.querySelector('#photoChar');
-const eyeColor = document.querySelector('#photoChar');
-const hairColor = document.querySelector('#photoChar');
+const specie = document.querySelector('#specie');
+const gender = document.querySelector('#gender');
+const age = document.querySelector('#age');
+const eyeColor = document.querySelector('#eyeColor');
+const hairColor = document.querySelector('#hairColor');
 const characters = document.querySelector('#partCharacters');
 //Constantes de la barra de busqueda
 const searchContainer = document.querySelector('.search-container');
