@@ -34,7 +34,7 @@ y locaciones
 - El usuario entra a la pagina y puede ver todas las imágenes y títulos de las películas
 - El usuario puede dar click en la imagen para ingresar a la información de la película
 
-En segundo lugaar, la Historia de Usuario #2 propone: "Como usuario yo quiero encontrar las 
+En segundo lugar, la Historia de Usuario #2 propone: "Como usuario yo quiero encontrar las 
 películas como imágenes para poder navegar dentro de cada una de las películas". Los 
 criterios de aceptaciónpara esta historia, fueron los siguientes:
 

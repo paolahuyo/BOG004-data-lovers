@@ -16,3 +16,21 @@ export function filtrarAsDs (data, order){
 
    return titleSort
 }
+
+export function evaluateId (data, event){
+  let infoPerson = {};
+  let idCharacter =  event.target.dataset.id;
+  data.forEach(function(film){
+    film.people.forEach(function(person){
+      if(person.id == idCharacter){
+      infoPerson = person;
+      }
+    });
+  })
+  return infoPerson;
+}
+
+
+
+
+

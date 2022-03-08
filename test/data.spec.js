@@ -94,7 +94,6 @@ describe('showMovies',() =>{
   })
 });
 
-
 describe('showCharacters', () =>{
   it('is a function', () =>{
     expect(typeof showCharacters).toBe('function');
@@ -110,7 +109,6 @@ describe('showCoincidences', () =>{
     expect(resultCoincidence[0].title).toEqual("My Neighbor Totoro");
   });
 });
-
 
 //No se puede hacer pues depende de un evento
 describe('showInfoCard', () =>{

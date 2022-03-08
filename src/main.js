@@ -1,9 +1,8 @@
 import data from './data/ghibli/ghibli.js';
-import { filtrarPeliculas, filtrarAsDs } from './data.js';
+import { filtrarPeliculas, filtrarAsDs, evaluateId } from './data.js';
 
 let dataFilms = data.films;
-const btnOrder = document.querySelector('#btnOrder');
-
+let movies =[];
 //Constantes para seccion movies
 const send = document.querySelector('#btn-send');
 const rootMovies = document.querySelector('#rootMovies');
@@ -16,7 +15,7 @@ const releaseDate = document.querySelector('#releaseDate');
 const directorMovie = document.querySelector('#directorMovie');
 const producerMovie = document.querySelector('#producerMovie');
 const tarjetas = document.getElementsByClassName('elements');
-
+const btnOrder = document.querySelector('#btnOrder');
 //Constantes para seccion characters
 const rootCharacters = document.querySelector('#rootCharacters');
 const rootCharacter = document.querySelector('#rootCharacter');
@@ -28,13 +27,12 @@ const age = document.querySelector('#photoChar');
 const eyeColor = document.querySelector('#photoChar');
 const hairColor = document.querySelector('#photoChar');
 const characters = document.querySelector('#partCharacters');
-
 //Constantes de la barra de busqueda
 const searchContainer = document.querySelector('.search-container');
 const inputBox = searchContainer.querySelector("input");
 const coincidenceBox = searchContainer.querySelector(".autocom-box");
-//const coincidence = searchContainer.querySelector("coincidence");
 
+//FUNCIONES
 /*funcion para pintar los posters de las peliculas*/
 function showMovies(data) {
       let html = "";
@@ -52,7 +50,7 @@ function showMovies(data) {
 showMovies(dataFilms)
 
 /*Función para mostrar la info de la pelicula que selecciona el usuario*/
-function renderMovie (tarjetas) {
+function renderMovie(tarjetas) {
       for (let i = 0; i < tarjetas.length; i++) {
             tarjetas[i].addEventListener('click', () => {
                   rootMovies.style.display = "none";
@@ -71,27 +69,6 @@ function renderMovie (tarjetas) {
       }
 }
 renderMovie(tarjetas)
-
-/*función para que ir a la info de la peli seleccionada desde el buscador*/
-
-/*function showMovieSearch (data,selection) {
-      let result = data.filter((element)=> element.title == selection)
-      for (let i = 0; i < result.length; i++) {
-            titleMovie.innerText = result[i].title;
-            photoMovie.setAttribute('src', result[i].poster);
-            rateMovie.innerText = result[i].rt_score;
-            releaseDate.innerText = result[i].release_date;
-            directorMovie.innerText = result[i].director;
-            producerMovie.innerText = result[i].producer;
-            descriptionMovie.innerText = result[i].description;
-      }
-}*/
-
-//console.log(coincidence);
-//console.log(coincidenceBox);
-coincidenceBox.addEventListener ('change', ()=>{
-      //console.log(coincidenceBox.value);
-})
 
 /*funcion para pintar los personajes de las peliculas*/
 function showCharacters(dataF) {
@@ -112,37 +89,15 @@ function showCharacters(dataF) {
 }
 showCharacters(dataFilms)
 
-/*Evento para mostrar la info del personaje que selecciona el usuario*/
-
-const cardChar = document.getElementsByClassName('elementsChar');
-for (let i = 0; i<cardChar.length; i++) {
-      cardChar[i].addEventListener('click', (event) => {
-            //let nameFiltered = dataFilms.filter((element)=> element.people(event.target.dataset.id));
-            console.log('personaje', event.target.dataset);
-            rootMovies.style.display = "none";
-            rootMovie.style.display = "none";
-            rootCharacters.style.display = "none";
-            rootCharacter.style.display = "block";
-            btnOrder.style.display="none";
-            titleChar.innerText = cardChar[i].people.name;
-            photoChar.setAttribute('src', cardChar[i].people.img);
-            specie.innerText = cardChar[i].people.specie;
-            gender.innerText = cardChar[i].people.gender;
-            age.innerText = cardChar[i].people.age;
-            eyeColor.innerText = cardChar[i].people.eye_color;
-            hairColor.innerText = cardChar[i].people.hair_color;
-      })
-}
-
-//Evento para llamar a todos los personajes de Ghibli
-characters.addEventListener('click', ()=>{
-      rootMovies.style.display = "none";
-      rootMovie.style.display = "none";
-      rootCharacters.style.display = "block";
-      rootCharacter.style.display = "none";
-      btnOrder.style.display="none";
-      searchContainer.style.display="none";
-})
+/*función con fecth para guardar array movies*/
+fetch('./data/ghibli/ghibli.json')
+    .then(response => response.json())
+    .then(data => movies = data.films) 
+    .catch(error => {
+        throw(error);
+    })
+console.log(data);
+console.log(movies);
 
 /*función buscar coincidencias en el input del usuario*/
 let userData=0;
@@ -153,9 +108,6 @@ inputBox.onkeyup = (e) => {
       return userData;
 }
 
-/*Evento del botón Search*/
-send.addEventListener('click', () => showCoincidences(filtrarPeliculas(dataFilms, userData)))
-
 /*funcion mostrar coincidencias debajo del buscador*/
 function showCoincidences(arrayResults){
       coincidenceBox.style.display = "block";
@@ -163,23 +115,37 @@ function showCoincidences(arrayResults){
             coincidenceBox.innerHTML="";
             for(let i=0; i<arrayResults.length; i++){
                   coincidenceBox.innerHTML+=`
-                  <div id="coincidences>
-                  <li id="coincidence">${arrayResults[i].title}</li>
+                  <div id="coincidences">
+                  <span onclick=" " id="coincidence-${arrayResults[i].id}" class="spanSearch">${arrayResults[i].title} </span>
                   </div>
                   `
             }
-
       } else {
-            coincidenceBox.innerHTML=`<p>No hay resultados para su busqueda</p>`
+            coincidenceBox.innerHTML=`<p>No hay resultados para su busqueda</p>`   
       }
- }
+      const resultsSearch = document.querySelectorAll('.spanSearch');
+      console.log(resultsSearch);
+      for(let j=0; j< resultsSearch.length ; j++){
+            console.log("hola");
+            resultsSearch[j].addEventListener("click", (e)=>{
 
-/* Evento de ordenar alfabéticamente */
-document.getElementById("order").addEventListener('change',() => {
-      let value = document.getElementById("order").value;
-      showMovies(filtrarAsDs(dataFilms, value));
-      showInfoCard(dataFilms);
-})
+                        rootMovies.style.display = "none";
+                        rootMovie.style.display = "block";
+                        rootCharacters.style.display = "none";
+                        rootCharacter.style.display = "none";
+                        btnOrder.style.display="none";
+                        /*titleMovie.innerText = dataFilms[i].title;
+                        photoMovie.setAttribute('src', dataFilms[i].poster);
+                        rateMovie.innerText = dataFilms[i].rt_score;
+                        releaseDate.innerText = dataFilms[i].release_date;
+                        directorMovie.innerText = dataFilms[i].director;
+                        producerMovie.innerText = dataFilms[i].producer;
+                        descriptionMovie.innerText = dataFilms[i].description;*/
+                        console.log(e.target.id);
+            })
+      }
+}   
+
 
 /*Función para mostrar la info de la película seleccionada después de filtrar alfabéticamente*/
 function showInfoCard (data) {
@@ -191,6 +157,7 @@ function showInfoCard (data) {
             rootCharacters.style.display = "none";
             rootCharacter.style.display = "none";
             btnOrder.style.display="none";
+            searchContainer.style.display="none";
             titleMovie.innerText = data[i].title;
             photoMovie.setAttribute('src', data[i].poster);
             rateMovie.innerText = data[i].rt_score;
@@ -201,3 +168,68 @@ function showInfoCard (data) {
             })
       }
 } 
+
+/*función para ir a la info de la peli seleccionada desde el buscador*/
+
+/*function showMovieSearch (data,selection) {
+      let result = data.filter((element)=> element.title == selection)
+      for (let i = 0; i < result.length; i++) {
+            titleMovie.innerText = result[i].title;
+            photoMovie.setAttribute('src', result[i].poster);
+            rateMovie.innerText = result[i].rt_score;
+            releaseDate.innerText = result[i].release_date;
+            directorMovie.innerText = result[i].director;
+            producerMovie.innerText = result[i].producer;
+            descriptionMovie.innerText = result[i].description;
+      }
+}*/
+//console.log(coincidence);
+//console.log(coincidenceBox);
+coincidenceBox.addEventListener ('change', ()=>{
+      //console.log(coincidenceBox.value);
+})
+
+//EVENTOS//
+
+/*Evento para llamar a todos los personajes de Ghibli*/
+characters.addEventListener('click', ()=>{
+      rootMovies.style.display = "none";
+      rootMovie.style.display = "none";
+      rootCharacters.style.display = "block";
+      rootCharacter.style.display = "none";
+      btnOrder.style.display="none";
+      searchContainer.style.display="none";
+})
+
+/*Evento del botón Search*/
+send.addEventListener('click', () => showCoincidences(filtrarPeliculas(dataFilms, userData)))
+
+/* Evento de ordenar alfabéticamente */
+document.getElementById("order").addEventListener('change',() => {
+      let value = document.getElementById("order").value;
+      showMovies(filtrarAsDs(dataFilms, value));
+      showInfoCard(dataFilms);
+})
+
+/*Evento para mostrar la info del personaje que selecciona el usuario*/
+
+const cardChar = document.getElementsByClassName('elementsChar');
+for (let i = 0; i<cardChar.length; i++) {
+      cardChar[i].addEventListener('click', (event) => {
+            let filterId = evaluateId(dataFilms,event);
+            console.log('personaje', event.target.dataset);
+            console.log(filterId);
+            rootMovies.style.display = "none";
+            rootMovie.style.display = "none";
+            rootCharacters.style.display = "none";
+            rootCharacter.style.display = "block";
+            btnOrder.style.display="none";
+            titleChar.innerText = filterId.name;
+            photoChar.setAttribute('src', filterId.img);
+            specie.innerText = filterId.specie;
+            gender.innerText = filterId.gender;
+            age.innerText = filterId.age;
+            eyeColor.innerText = filterId.eye_color;
+            hairColor.innerText = filterId.hair_color;
+      })
+}
