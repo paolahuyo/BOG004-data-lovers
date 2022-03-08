@@ -225,7 +225,7 @@ for (let i = 0; i<cardChar.length; i++) {
             rootCharacter.style.display = "block";
             btnOrder.style.display="none";
             titleChar.innerText = filterId.name;
-            photoChar.setAttribute('src', filterId.img);
+            photoCharacter.setAttribute('src', filterId.img);
             specie.innerText = filterId.specie;
             gender.innerText = filterId.gender;
             age.innerText = filterId.age;
