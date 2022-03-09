@@ -126,7 +126,6 @@ function showCoincidences(arrayResults){
       const resultsSearch = document.querySelectorAll('.spanSearch');
       console.log(resultsSearch);
       for(let j=0; j< resultsSearch.length ; j++){
-            // console.log("hola");
             resultsSearch[j].addEventListener("click", ()=>{
 
                         rootMovies.style.display = "none";

@@ -22,6 +22,17 @@ fidelidad, y, también, unas posibles historias de usuario, donde pudimos
 reflejar lo que, posiblemente, quisiera observar un usuario que entre en la página de Studio
 Ghibli.
 
+## Investigación y procesos para creación de User Stories:
+
+https://www.figma.com/file/7tefunljDSdouy2bZTolLs/Historias-de-Usuario-de-DL17?node-id=0%3A1
+
+## Prototipo de baja resolución:
+
+https://www.figma.com/file/rKgA4GO9kzW7xvgZ1zoNYq/Prototipo-baja-resoluci%C3%B3n-DL
+
+### Usabilidad del prototipo:
+https://www.figma.com/proto/rKgA4GO9kzW7xvgZ1zoNYq/Prototipo-baja-resoluci%C3%B3n-DL?node-id=1%3A2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1
+
 ## User Stories:
 
 En primer lugar, el Usuario #1: "Como usuario yo quiero encontrar las películas como imágenes
@@ -58,17 +69,32 @@ También, se construyeron los tests de usabilidad o pruebas unitarias correspond
 el proyecto en cuestión, donde se evaluaron las funciones utulizadas, como el de procesar,
 filtrar y ordenar la data.
 
+## Prototipo de alta resolución:
+
+https://www.figma.com/file/DqdOEzXLG4KG5NpIUVlgKy/directory-ghibli-HF-prototype?node-id=0%3A1
+
+### Usabilidad del prototipo:
+
+https://www.figma.com/proto/DqdOEzXLG4KG5NpIUVlgKy/directory-ghibli-HF-prototype?node-id=1%3A82&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2
+
+## Tecnologias usadas:
+- Despligue de imagenes de películas en primera etapa de la construcción de la aplicación con Json y Fetch
+- Funciones de segundo grado
+- Metodos Filter y Sort para las funciones de arrays
+- Uso de for, forEach, e.target, key para las funciones construidas
+- Uso de template strings en las funciones de render
+- Uso de eventos con change y click
+- Uso de import y export
+- Uso de return en las funciones creadas
+- Uso de flex y flexbox para la mayoria de nuestros elementos lo que hizo nuestra web responsive
+
 ## Estrategias utilizadas para avanzar en el proyecto:
 - Investigación propia (individual y grupal)
 - Consensos y trabajo en equipo en live share, zoom (En dupla)
 - Revisión de oa's, recursos tipo lectura, video, tutoriales, ejemplos, retos, etc.
 - Retroalimentación de ayudantías
 
-## Tecnologias usadas:
-- Despligue de imagenes de películas en primera etapa de la construcción con Json y Fetch
-- Funciones de segundo grado
-- Metodos Filter y Sort para las funciones de arrays
-- Uso de template strings en las funciones de render
+
 
 
 
