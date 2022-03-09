@@ -1,5 +1,6 @@
 import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
-import { filtrarPeliculas, filtrarAsDs} from '../src/data.js';
+import { filtrarPeliculas, filtrarAsDs, evaluateId } from '../src/data.js';
+import data from '../src/data/ghibli/ghibli.js';
 
 let orderTest="za";
 let forMovies=[
@@ -58,8 +59,6 @@ let resultMovie = [
   },
 ]
 
-
-
 describe('filtrarPelículas', () =>{
   it('is a function', () =>{
     expect(typeof filtrarPeliculas).toBe('function');
@@ -67,7 +66,6 @@ describe('filtrarPelículas', () =>{
   test('returns `filtrarPeliculas`', () => {
     expect(filtrarPeliculas(forMovies, 'kiki')).toEqual(resultMovie);
   })
-
 });
 
 describe('filtrarAsDs', () =>{
@@ -79,3 +77,12 @@ describe('filtrarAsDs', () =>{
       expect(result[0].title).toEqual("My Neighbor Totoro");
   });
 });
+
+describe ('evaluateId', ()=>{
+  test ('returns evaluate id', () => {
+     //evento falso
+    const result = evaluateId(data.films, {'target':{'dataset':{'id':'fe93adf2-2f3a-4ec4-9f68-5422f1b87c01'}}} )
+    expect (result).toEqual(data.films[0].people[0]);
+  })
+})
+

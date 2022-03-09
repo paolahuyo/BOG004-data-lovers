@@ -124,10 +124,9 @@ function showCoincidences(arrayResults){
             coincidenceBox.innerHTML=`<p>No hay resultados para su busqueda</p>`   
       }
       const resultsSearch = document.querySelectorAll('.spanSearch');
-      console.log(resultsSearch);
+      //console.log(resultsSearch);
       for(let j=0; j< resultsSearch.length ; j++){
             resultsSearch[j].addEventListener("click", ()=>{
-
                         rootMovies.style.display = "none";
                         rootMovie.style.display = "block";
                         rootCharacters.style.display = "none";

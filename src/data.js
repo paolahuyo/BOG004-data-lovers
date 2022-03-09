@@ -14,7 +14,7 @@ export function filtrarAsDs (data, order){
    if (order === 'az'){titleSort}
    if (order === 'za'){titleSort.reverse()}
 
-   return titleSort
+   return titleSort;
 }
 
 export function evaluateId (data, event){
