@@ -20,7 +20,7 @@ const btnOrder = document.querySelector('#btnOrder');
 const rootCharacters = document.querySelector('#rootCharacters');
 const rootCharacter = document.querySelector('#rootCharacter');
 const titleChar = document.querySelector('#titleChar');
-const photoChar = document.querySelector('#photoChar');
+const photoCharacter = document.querySelector('#photoCharacter');
 const specie = document.querySelector('#specie');
 const gender = document.querySelector('#gender');
 const age = document.querySelector('#age');
@@ -124,7 +124,7 @@ function showCoincidences(arrayResults){
             coincidenceBox.innerHTML=`<p>No hay resultados para su busqueda</p>`   
       }
       const resultsSearch = document.querySelectorAll('.spanSearch');
-      // console.log(resultsSearch);
+      console.log(resultsSearch);
       for(let j=0; j< resultsSearch.length ; j++){
             // console.log("hola");
             resultsSearch[j].addEventListener("click", ()=>{
