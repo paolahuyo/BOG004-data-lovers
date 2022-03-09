@@ -2,7 +2,7 @@ import data from './data/ghibli/ghibli.js';
 import { filtrarPeliculas, filtrarAsDs, evaluateId } from './data.js';
 
 let dataFilms = data.films;
-let movies =[];
+// let movies =[];
 //Constantes para seccion movies
 const send = document.querySelector('#btn-send');
 const rootMovies = document.querySelector('#rootMovies');
@@ -92,12 +92,12 @@ showCharacters(dataFilms)
 /*función con fecth para guardar array movies*/
 fetch('./data/ghibli/ghibli.json')
     .then(response => response.json())
-    .then(data => movies = data.films) 
+    .then(data => data.films) 
     .catch(error => {
         throw(error);
     })
-console.log(data);
-console.log(movies);
+// console.log(data);
+// console.log(movies);
 
 /*función buscar coincidencias en el input del usuario*/
 let userData=0;
@@ -124,10 +124,10 @@ function showCoincidences(arrayResults){
             coincidenceBox.innerHTML=`<p>No hay resultados para su busqueda</p>`   
       }
       const resultsSearch = document.querySelectorAll('.spanSearch');
-      console.log(resultsSearch);
+      // console.log(resultsSearch);
       for(let j=0; j< resultsSearch.length ; j++){
-            console.log("hola");
-            resultsSearch[j].addEventListener("click", (e)=>{
+            // console.log("hola");
+            resultsSearch[j].addEventListener("click", ()=>{
 
                         rootMovies.style.display = "none";
                         rootMovie.style.display = "block";
@@ -141,7 +141,7 @@ function showCoincidences(arrayResults){
                         directorMovie.innerText = dataFilms[i].director;
                         producerMovie.innerText = dataFilms[i].producer;
                         descriptionMovie.innerText = dataFilms[i].description;*/
-                        console.log(e.target.id);
+                        // console.log(e.target.id);
             })
       }
 }   
@@ -217,8 +217,8 @@ const cardChar = document.getElementsByClassName('elementsChar');
 for (let i = 0; i<cardChar.length; i++) {
       cardChar[i].addEventListener('click', (event) => {
             let filterId = evaluateId(dataFilms,event);
-            console.log('personaje', event.target.dataset);
-            console.log(filterId);
+            // console.log('personaje', event.target.dataset);
+            // console.log(filterId);
             rootMovies.style.display = "none";
             rootMovie.style.display = "none";
             rootCharacters.style.display = "none";

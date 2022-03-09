@@ -1,6 +1,5 @@
 import { describe, it } from 'eslint/lib/rule-tester/rule-tester';
-import { filtrarPeliculas, filtrarAsDs } from '../src/data.js';
-import { showMovies, showCharacters, showCoincidences, showInfoCard } from '../src/main.js';
+import { filtrarPeliculas, filtrarAsDs} from '../src/data.js';
 
 let orderTest="za";
 let forMovies=[
@@ -56,7 +55,7 @@ let resultMovie = [
     "poster": "https://static.wikia.nocookie.net/studio-ghibli/images/4/48/Kiki%27s_Delivery_Service_%282%29.jpg",
     "release_date": "1989",
     "rt_score": "96",
-  }
+  },
 ]
 
 
@@ -65,9 +64,9 @@ describe('filtrarPelículas', () =>{
   it('is a function', () =>{
     expect(typeof filtrarPeliculas).toBe('function');
   });
-  it('returns `filtrarPeliculas`', () => {
+  test('returns `filtrarPeliculas`', () => {
     expect(filtrarPeliculas(forMovies, 'kiki')).toEqual(resultMovie);
-  });
+  })
 
 });
 
@@ -75,65 +74,8 @@ describe('filtrarAsDs', () =>{
   it('is a function', () =>{
     expect(typeof filtrarAsDs).toBe('function');
   });
-  it('descending order for name', () => {
+  test('descending order for name', () => {
       const result = filtrarAsDs(forMovies, orderTest);
-      expect(result[0].title).toEqual("Kiki's Delivery Service");
+      expect(result[0].title).toEqual("My Neighbor Totoro");
   });
 });
-
-describe('showMovies',() =>{
-  it('is a function',() =>{
-    expect(typeof showMovies).toBe('function');
-    const elements = showMovies ()
-    expect(elements instanceof HTMLElement).toBe(true)
-  });
-  it.only('Should print 20 elements',() => {
-    const cards = showMovies();
-    const result = cards.querySelectorAll('.tarjeta')
-    expect(result.length).toBe(20)
-  })
-});
-
-describe('showCharacters', () =>{
-  it('is a function', () =>{
-    expect(typeof showCharacters).toBe('function');
-  });
-});
-
-describe('showCoincidences', () =>{
-  it('is a function', () =>{
-    expect(typeof showCoincidences).toBe('function');
-  });
-  it('returns `showCoincidences`', () => {
-    const resultCoincidence = showCoincidences("TOTORO");
-    expect(resultCoincidence[0].title).toEqual("My Neighbor Totoro");
-  });
-});
-
-//No se puede hacer pues depende de un evento
-describe('showInfoCard', () =>{
-  it('is a function', () =>{
-    expect(typeof showInfoCard).toBe('function');
-  });
-});
-
-// describe('example', () => {
-//   it('is a function', () => {
-//     expect(typeof example).toBe('function');
-//   });
-
-//   it('returns `example`', () => {
-//     expect(example()).toBe('example');
-//   });
-// });
-
-
-// describe('anotherExample', () => {
-//   it('is a function', () => {
-//     expect(typeof anotherExample).toBe('function');
-//   });
-
-//   it('returns `anotherExample`', () => {
-//     expect(anotherExample()).toBe('OMG');
-//   });
-// });
