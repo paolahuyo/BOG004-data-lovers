@@ -30,7 +30,11 @@ https://www.figma.com/file/7tefunljDSdouy2bZTolLs/Historias-de-Usuario-de-DL17?n
 
 https://www.figma.com/file/rKgA4GO9kzW7xvgZ1zoNYq/Prototipo-baja-resoluci%C3%B3n-DL
 
-![home]()
+![Home](src="Prototype/01-home.jpg")
+![Movies](src="Prototype/02-1-movies.jpg")
+![Movie Selected](src="Prototype/02-2-movie-selected.jpg")
+![Characters](src="Prototype/03-1-characters.jpg")
+![Character Selected](src="src/Prototype/03-2-character-selected.jpg")
 
 ### Usabilidad del prototipo:
 https://www.figma.com/proto/rKgA4GO9kzW7xvgZ1zoNYq/Prototipo-baja-resoluci%C3%B3n-DL?node-id=1%3A2&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2&show-proto-sidebar=1
