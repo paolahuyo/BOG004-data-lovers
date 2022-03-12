@@ -24,11 +24,13 @@ Ghibli.
 
 ## Investigación y procesos para creación de User Stories:
 
-![Investigación](https://www.figma.com/file/7tefunljDSdouy2bZTolLs/Historias-de-Usuario-de-DL17?)node-id=0%3A1
+### Investigación
+https://www.figma.com/file/7tefunljDSdouy2bZTolLs/Historias-de-Usuario-de-DL17?node-id=0%3A1
 
 ## Prototipo de baja resolución:
 
-![Wireframes](https://www.figma.com/file/rKgA4GO9kzW7xvgZ1zoNYq/Prototipo-baja-resoluci%C3%B3n-DL)
+### Wireframes
+https://www.figma.com/file/rKgA4GO9kzW7xvgZ1zoNYq/Prototipo-baja-resoluci%C3%B3n-DL
 
 ### Usabilidad del prototipo:
 
@@ -72,7 +74,8 @@ filtrar y ordenar la data.
 
 ## Prototipo de alta resolución:
 
-![Prototype](https://www.figma.com/file/DqdOEzXLG4KG5NpIUVlgKy/directory-ghibli-HF-prototype?node-id=0%3A1)
+### Prototype 
+https://www.figma.com/file/DqdOEzXLG4KG5NpIUVlgKy/directory-ghibli-HF-prototype?node-id=0%3A1
 
 ![Home](src="Prototype/01-home.jpg")
 ![Movies](src="Prototype/02-1-movies.jpg")
@@ -80,9 +83,10 @@ filtrar y ordenar la data.
 ![Characters](src="Prototype/03-1-characters.jpg")
 ![Character Selected](src="src/Prototype/03-2-character-selected.jpg")
 
-### Usabilidad del prototipo:
+## Usabilidad del prototipo:
 
-![Prototype UX](https://www.figma.com/proto/DqdOEzXLG4KG5NpIUVlgKy/directory-ghibli-HF-prototype?node-id=1%3A82&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2)
+### Prototype UX
+https://www.figma.com/proto/DqdOEzXLG4KG5NpIUVlgKy/directory-ghibli-HF-prototype?node-id=1%3A82&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=1%3A2
 
 ## Tecnologias usadas:
 - Despligue de imagenes de películas en primera etapa de la construcción de la aplicación con Json y Fetch
